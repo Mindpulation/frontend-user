@@ -1,4 +1,4 @@
-import Nav from "../component/nav";
+import Nav from "../component/nav/nav";
 
 const Home = () => {
   return(
