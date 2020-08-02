@@ -18,10 +18,10 @@ const Menu = () => {
         </Head>    
         <div className={s.boxMenu}>          
           <div className={s.txtContainerBold}>
-            Masuk
+            Log in
           </div>        
           <div className={s.txtContainer}>
-            Daftar
+            Sign up
           </div>
           <div className={s.lineHr}></div>
         </div>        
