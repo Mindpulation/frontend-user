@@ -78,13 +78,17 @@
     flex-direction: row;
     align-items: center;
 }
+.Link{
+    color: rgba(9, 124, 190, 0.89);
+}
 .BoldLink{
     font-size: 1.15rem;
     color: rgba(9, 124, 190, 0.89);
     font-weight: 500;
+    outline: none;
 }
 .LinkForget{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgba(9, 124, 190, 0.89);
     float: right;
     font-weight: 500;
@@ -98,7 +102,8 @@
     border: 0.25px solid gray;
     border-radius: 5px;
     margin-top: 5px;
-    padding: 5px 3px;
+    padding: 10px;
+    padding-right: 0;
     width: 100%;
     font-size: 1rem;
 }
@@ -108,18 +113,25 @@
 }
 .button{
     background-color: rgb(9, 147, 211);
-    padding: 10px 120px;
+    width: 100%;
+    padding: 15px 0px;
     font-size: 1rem;
     border: none;
     outline: none;
     border-radius: 5px;
     color: white;
     margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;   
 }
 .button:hover{
     background-color: rgba(9, 124, 190, 0.89);
+    box-shadow: 0px 0.5px 5px gray;
 }
-
+.agree{
+    font-size: 0.5rem;
+    margin-left: 5px;
+}
 @media (max-width: 768px) {
     .card{
         width: 100%;

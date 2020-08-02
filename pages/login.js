@@ -17,7 +17,7 @@ const login = () => (
         <h3>
           Masuk
         </h3>
-        <a className={styles.BoldLink}><Link href="/">Daftar</Link></a>
+        <a className={styles.BoldLink}><Link href="/register">Daftar</Link></a>
       </div>
 
       <form>
@@ -30,7 +30,7 @@ const login = () => (
           <div className={styles.col}>
             <label>Password</label>
             <input className={styles.input}></input>
-            <span className={styles.span}>masukin password</span>
+            <span className={styles.span}>masukan password</span>
           </div>
         </div>
         <a className={styles.LinkForget}><Link href="/">Lupa Sandi?</Link></a>
