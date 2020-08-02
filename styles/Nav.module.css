@@ -1,4 +1,10 @@
-.header{
+.wrapNav{
+  position: fixed ;
+  width: 100%;      
+  /* background-color: red; */
+}
+
+.header{  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,12 +36,13 @@
   outline: none;
 }
 
-.nav .wrapSearch .inputSearch{  
+.nav .wrapSearch .inputSearch{      
   padding: 5px;    
   border: none;
   /* border: 1px solid lightgray; */
   outline: none;
   margin-right: 10px;
+  background-color: transparent;
 }
 
 .nav .wrapSearch .btnSearch .icon{    
@@ -48,11 +55,23 @@
 }
 
 .btnProfile{
-  color: rgba(33, 34, 34, 0.541);
-  border: none;
+  color: rgba(33, 34, 34, 0.541);  
   background-color: transparent;  
   cursor: pointer;
   outline: none;
+  border: 1px solid lightgray;
+  padding: 7px;
+  border-radius: 25px;  
+}
+
+.btnProfile:hover{
+  box-shadow: 3px 3px 7px 0px lightgray;
+}
+
+.btnProfile .icon{
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 @media screen and (max-width:500px){
