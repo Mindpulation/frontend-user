@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const MenuContext = React.createContext({});
+export const MenuContext = React.createContext({});
 
-export default  function Context({children}){
+export default function Context({children}){
 
   const [staMenu, setStaMenu] = useState(false)
 

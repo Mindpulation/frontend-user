@@ -1,28 +1,39 @@
+import Head from "next/head";
+
 import s from '../../styles/Menu.module.css'
+import { useContext } from "react";
+
+import {MenuContext} from "../../context/index.js";
 
 const Menu = () => {
 
-  return(
-    
-    <div>
+  const [staMenu,] = useContext(MenuContext);
 
-      <div className={s.boxMenu}>
-        
-        <div className={s.txtContainer}>
-          Log in
-        </div>
-        
-        <div className={s.txtContainer}>
-          Sign up
-        </div>
-
-        <br></br>
-
+  if(staMenu === true){
+    return(    
+      <div>
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>    
+        <div className={s.boxMenu}>          
+          <div className={s.txtContainerBold}>
+            Masuk
+          </div>        
+          <div className={s.txtContainer}>
+            Daftar
+          </div>
+          <div className={s.lineHr}></div>
+        </div>        
       </div>
+    )
+  }
 
-    </div>
-
-  )
+  else{
+    return(
+      <div></div>
+    )
+  }
 
 }
 

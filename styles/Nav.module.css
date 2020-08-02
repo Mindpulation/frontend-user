@@ -1,4 +1,10 @@
-.header{
+.wrapNav{
+  position: fixed ;
+  width: 100%;      
+  /* background-color: red; */
+}
+
+.header{  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,6 +42,7 @@
   /* border: 1px solid lightgray; */
   outline: none;
   margin-right: 10px;
+  background-color: transparent;
 }
 
 .nav .wrapSearch .btnSearch .icon{    
