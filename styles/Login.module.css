@@ -1,0 +1,137 @@
+.containerFull{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    padding: 2.5px;
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+}
+
+.header h1{
+    width: 100%;
+    padding: 32px 0 9px;
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    padding: 2.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rowCenter{
+    width: 100%;
+    padding: 2.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+    padding: 2.5px;
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 400px;
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 30px 32px 30px;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    box-shadow: 0px 1px 5px gray;
+}
+.headsign{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.BoldLink{
+    font-size: 1.15rem;
+    color: rgba(9, 124, 190, 0.89);
+    font-weight: 500;
+}
+.LinkForget{
+    font-size: 1rem;
+    color: rgba(9, 124, 190, 0.89);
+    float: right;
+    font-weight: 500;
+}
+.span{
+    font-size: 0.5rem;
+    color: rgb(139, 139, 139);
+    margin-top: 5px;
+}
+.input{
+    border: 0.25px solid gray;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 3px;
+    width: 100%;
+    font-size: 1rem;
+}
+.input:focus{
+    outline: none !important;
+    border: 1.5px solid rgb(9, 147, 211);
+}
+.button{
+    background-color: rgb(9, 147, 211);
+    padding: 10px 120px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+}
+.button:hover{
+    background-color: rgba(9, 124, 190, 0.89);
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 100%;
+        box-shadow: none;
+    }
+}
+@media (max-width: 268px) {
+    .card{
+        padding: 0px;
+    }
+    .button{
+        padding: 5px 30%;
+    }
+}
+  
