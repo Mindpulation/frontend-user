@@ -4,56 +4,64 @@ import styles from '../styles/Login.module.css';
 
 const register = () => (
   <div className={styles.containerFull}>
+    
     <Head>
       <title>KotakJualan-Register</title>
-      <link rel="icon" href="/favicon.ico" />
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
+    
     <header className={styles.header}>
-      <h1>KotakJualan</h1>
+      <h1>Kotakjualan</h1>
     </header>
+
     <main className={styles.main}>
+    
       <div className={styles.card}>
+    
         <div className={styles.headsign}>
-          <h3>
-            Daftar
-          </h3>
-          <a className={styles.BoldLink}><Link href="/login">Masuk</Link></a>
+          <h4>
+            Sign up
+          </h4>
+          <Link href="/login"><a className={styles.BoldLink}>Log in</a></Link>
         </div>
 
-        <form>
-          <div className={styles.row}>
-            <div className={styles.col}>
-              <label>Username</label>
-              <input className={styles.input}></input>
-              <span className={styles.span}>masukan username</span>
-            </div>
-            <div className={styles.col}>
-              <label>Email</label>
-              <input className={styles.input}></input>
-              <span className={styles.span}>contoh : example@mail.dot</span>
-            </div>
-            <div className={styles.col}>
-              <label>Password</label>
-              <input className={styles.input}></input>
-              <span className={styles.span}>masukan password</span>
-            </div>
+        <div className={styles.row}>
+        
+          <div className={styles.col}>
+            <label>Username</label>
+            <input className={styles.input}></input>
+            <span className={styles.span}>Masukan username</span>
           </div>
-          <div className={styles.rowCenter}>
-            <button className={styles.button}>Daftar</button>
+        
+          <div className={styles.col}>
+            <label>Email</label>
+            <input className={styles.input} type={"email"} ></input>
+            <span className={styles.span}>contoh : example@mail.dot</span>
           </div>
-          <div className={styles.row}>
-            <input type="checkbox" />
-            <p className={styles.agree}>
-              Saya menyetujui 
-              <a className={styles.Link}>
-                <Link href="#">EULA</Link>
-              </a> dan
-              <a className={styles.Link}>
-                <Link href="#">Privacy Policy</Link>
-              </a>
-            </p>
+        
+          <div className={styles.col}>
+            <label>Password</label>
+            <input className={styles.input} type={"password"} ></input>
+            <span className={styles.span}>Masukan password</span>
           </div>
-        </form>
+        
+        </div>
+        
+        <div className={styles.rowCenter}>
+          <button className={styles.button}>Selanjutnya</button>
+        </div>
+        
+        <div className={styles.row}>                  
+          
+          <p className={styles.agree}>
+            Saya menyetujui             
+            <a className={styles.Link}> EULA</a> dan                        
+            <a className={styles.Link}> Privacy Policy</a>           
+          </p>
+
+        </div>
+        
       </div>
     </main>
 

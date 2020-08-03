@@ -60,7 +60,7 @@
   cursor: pointer;
   outline: none;
   border: 1px solid lightgray;
-  padding: 7px;
+  padding: 7px 10px;
   border-radius: 25px;  
 }
 

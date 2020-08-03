@@ -1,20 +1,20 @@
 .boxMenu{ 
   position: fixed;  
 
-  width: 150px;
+  width: 200px;
   height: auto;
 
   top: 70px;
   right: 10%;
   
   /* background-color: blue; */  
-  -webkit-box-shadow: 3px -2px 17px 0px rgba(224,224,224,1);
-  -moz-box-shadow: 3px -2px 17px 0px rgba(224,224,224,1);
-  box-shadow: 3px -2px 17px 0px rgba(224,224,224,1);
+  -webkit-box-shadow: 3px -2px 12px 5px rgba(224,224,224,0.719);
+  -moz-box-shadow: 3px -2px 12px 5px rgba(224,224,224,0.719);
+  box-shadow: 3px -2px 12px 5px rgba(224, 224, 224, 0.719);
   border-radius: 10px;
 
   padding-bottom: 25px;
-  padding-top: 10px;
+  padding-top: 15px;
 
 }
 
@@ -36,7 +36,7 @@
   font-weight: 100;
 
   font-size: small; 
-  color: rgba(105, 105, 105, 0.726);
+  color: rgba(105, 105, 105, 0.822);
   
   padding: 8px 15px;  
   
@@ -49,6 +49,14 @@
 
 .lineHr{
   width: 100%;
-  border: 0.1px solid rgb(231, 231, 231);
+  border: 0.2px solid rgba(231, 231, 231, 0.698);
   margin: 10px 0px;
+}
+
+@media screen and (max-width:500px){
+
+  .boxMenu{
+    display: none;
+  }
+
 }

@@ -2,6 +2,7 @@
     width: 100%;
     min-height: 100vh;
     align-items: center;
+    overflow: hidden;
 }
 
 .container{
@@ -19,13 +20,13 @@
 
 .header h1{
     width: 100%;
-    padding: 32px 0 9px;
+    padding-top: 25px;
+    padding-bottom: 10px;    
     text-align: center;
 }
 
 .main {
-    width: 100%;
-    padding: 5rem 0;
+    width: 100%;    
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -42,8 +43,7 @@
 }
 
 .rowCenter{
-    width: 100%;
-    padding: 2.5px;
+    width: 100%;    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,30 +61,33 @@
 }
 
 .card {
-    width: 400px;
-    margin: 1rem;
+    width: 325px;       
     flex-basis: 45%;
-    padding: 30px 32px 30px;
+    padding: 25px;
+    padding-top: 25px;
     text-align: left;
     color: inherit;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    box-shadow: 0px 1px 5px gray;
+    -webkit-box-shadow: -1px 0px 9px -1px lightgray;
+    -moz-box-shadow: -1px 0px 9px -1px lightgray;
+    box-shadow: -1px 0px 9px -1px lightgray;
 }
 .headsign{
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0px 5px;
 }
 .Link{
     color: rgba(9, 124, 190, 0.89);
 }
 .BoldLink{
-    font-size: 1.15rem;
+    font-size: medium;
     color: rgba(9, 124, 190, 0.89);
-    font-weight: 500;
+    font-weight: 400;
     outline: none;
 }
 .LinkForget{
@@ -94,7 +97,7 @@
     font-weight: 500;
 }
 .span{
-    font-size: 0.5rem;
+    font-size: small;
     color: rgb(139, 139, 139);
     margin-top: 5px;
 }
@@ -105,45 +108,56 @@
     padding: 10px;
     padding-right: 0;
     width: 100%;
-    font-size: 1rem;
+    font-size: smaller;        
 }
 .input:focus{
     outline: none !important;
-    border: 1.5px solid rgb(9, 147, 211);
+    border: 1px solid rgb(9, 147, 211);
 }
+
+.input:hover{
+    outline: none !important;
+    border: 1px solid rgb(9, 147, 211);
+}
+
 .button{
     background-color: rgb(9, 147, 211);
     width: 100%;
     padding: 15px 0px;
-    font-size: 1rem;
+    font-size: medium;
     border: none;
     outline: none;
     border-radius: 5px;
     color: white;
     margin-top: 5px;
     margin-bottom: 10px;
-    cursor: pointer;   
+    cursor: pointer;  
+    font-weight: bold; 
 }
-.button:hover{
-    background-color: rgba(9, 124, 190, 0.89);
-    box-shadow: 0px 0.5px 5px gray;
+.button:hover{    
+    background-color: rgba(9, 147, 211, 0.76);
 }
 .agree{
-    font-size: 0.5rem;
+    font-size: smaller;
     margin-left: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+    .header h1{
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
     .card{
+        padding-top: 0px;
         width: 100%;
         box-shadow: none;
     }
 }
 @media (max-width: 268px) {
     .card{
-        padding: 0px;
+        padding: 10px;
     }
-    .button{
-        padding: 5px 30%;
-    }
+    .header{
+        display: none   ;
+    }        
 }
   
