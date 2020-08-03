@@ -61,7 +61,7 @@
 }
 
 .card {
-    width: 350px;       
+    width: 325px;       
     flex-basis: 45%;
     padding: 25px;
     padding-top: 25px;
@@ -70,15 +70,16 @@
     text-decoration: none;
     border-radius: 7px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    -webkit-box-shadow: -1px 0px 9px -1px dimgray;
-    -moz-box-shadow: -1px 0px 9px -1px dimgray;
-    box-shadow: -1px 0px 9px -1px dimgray;
+    -webkit-box-shadow: -1px 0px 9px -1px lightgray;
+    -moz-box-shadow: -1px 0px 9px -1px lightgray;
+    box-shadow: -1px 0px 9px -1px lightgray;
 }
 .headsign{
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0px 5px;
 }
 .Link{
     color: rgba(9, 124, 190, 0.89);
@@ -153,10 +154,10 @@
 }
 @media (max-width: 268px) {
     .card{
-        padding: 0px;
+        padding: 10px;
     }
-    .button{
-        padding: 5px 30%;
-    }
+    .header{
+        display: none   ;
+    }        
 }
   

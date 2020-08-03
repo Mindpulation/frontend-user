@@ -20,9 +20,7 @@ const login = () => (
       <div className={styles.card}>
         
         <div className={styles.headsign}>
-          <h3>
-            Log in
-          </h3>
+          <h4>Log in</h4>
           <Link href="/register"><a className={styles.BoldLink}>Sign up</a></Link>
         </div>
 
@@ -37,7 +35,7 @@ const login = () => (
           <div className={styles.col}>
             <label>Password</label>
             <input className={styles.input} type={"password"} ></input>
-            <span className={styles.span}>masukan password</span>
+            <span className={styles.span}>Masukan password</span>
           </div>
 
         </div>

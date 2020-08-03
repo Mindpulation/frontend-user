@@ -20,9 +20,9 @@ const register = () => (
       <div className={styles.card}>
     
         <div className={styles.headsign}>
-          <h3>
+          <h4>
             Sign up
-          </h3>
+          </h4>
           <Link href="/login"><a className={styles.BoldLink}>Log in</a></Link>
         </div>
 
@@ -31,7 +31,7 @@ const register = () => (
           <div className={styles.col}>
             <label>Username</label>
             <input className={styles.input}></input>
-            <span className={styles.span}>masukan username</span>
+            <span className={styles.span}>Masukan username</span>
           </div>
         
           <div className={styles.col}>
@@ -43,7 +43,7 @@ const register = () => (
           <div className={styles.col}>
             <label>Password</label>
             <input className={styles.input} type={"password"} ></input>
-            <span className={styles.span}>masukan password</span>
+            <span className={styles.span}>Masukan password</span>
           </div>
         
         </div>

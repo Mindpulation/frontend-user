@@ -4,6 +4,7 @@ import s from '../../styles/Menu.module.css'
 import { useContext } from "react";
 
 import {MenuContext} from "../../context/index.js";
+import Link from "next/link";
 
 const Menu = () => {
 
@@ -21,22 +22,29 @@ const Menu = () => {
         </Head>    
         
         <div className={s.boxMenu}>          
-          <div className={s.txtContainerBold}>
-            Log in
-          </div>        
-          <div className={s.txtContainer}>
-            Sign up
-          </div>
+          
+          <Link href="/login">
+            <div className={s.txtContainerBold}>Log in</div>
+          </Link>        
+          
+          <Link href="/register">
+            <div className={s.txtContainer}>Sign up</div>
+          </Link>
+
           <div className={s.lineHr}></div>
+          
           <div className={s.txtContainer}>
             Your saved
           </div>
+          
           <div className={s.txtContainer}>
             Look at the cart
           </div>
+          
           <div className={s.txtContainer}>
             Help
           </div>
+          
         </div>                
 
       </div>
