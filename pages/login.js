@@ -4,41 +4,52 @@ import styles from '../styles/Login.module.css';
 
 const login = () => (
   <div className={styles.containerFull}>
+    
     <Head>
       <title>KotakJualan-Login</title>
-      <link rel="icon" href="/favicon.ico" />
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
+    
     <header className={styles.header}>
-      <h1>KotakJualan</h1>
+      <h1>Kotakjualan</h1>
     </header>
+    
     <main className={styles.main}>
-    <div className={styles.card}>
-      <div className={styles.headsign}>
-        <h3>
-          Masuk
-        </h3>
-        <a className={styles.BoldLink}><Link href="/register">Daftar</Link></a>
-      </div>
+    
+      <div className={styles.card}>
+        
+        <div className={styles.headsign}>
+          <h3>
+            Log in
+          </h3>
+          <Link href="/register"><a className={styles.BoldLink}>Sign up</a></Link>
+        </div>
 
-      <form>
         <div className={styles.row}>
+          
           <div className={styles.col}>
             <label>Email</label>
             <input className={styles.input}></input>
             <span className={styles.span}>contoh : example@mail.dot</span>
           </div>
+          
           <div className={styles.col}>
             <label>Password</label>
-            <input className={styles.input}></input>
+            <input className={styles.input} type={"password"} ></input>
             <span className={styles.span}>masukan password</span>
           </div>
+
         </div>
-        <a className={styles.LinkForget}><Link href="/">Lupa Sandi?</Link></a>
+        
+        <Link href="/"><a className={styles.LinkForget}>Lupa Sandi?</a></Link>
+        
         <div className={styles.rowCenter}>
           <button className={styles.button}>Masuk</button>
-        </div>
-      </form>
-    </div>
+        </div>      
+
+      </div>
+      
     </main>
 
   </div>
