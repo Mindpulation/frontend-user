@@ -43,7 +43,8 @@
 }
 
 .rowCenter{
-    width: 100%;    
+    width: 100%; 
+    margin: 10px 0px;   
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -95,8 +96,10 @@
 
 .headsign p {
     font-size: small;
+    color: rgb(139, 139, 139);
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 10px;
+    text-align: center;
 }
 .Link{
     color: rgba(9, 124, 190, 0.89);
@@ -117,10 +120,11 @@
     border: none;
     border-bottom: 0.25px solid gray;
     margin-top: 5px;
-    padding: 10px;
-    padding-right: 0;
-    width: 100%;
-    font-size: medium;        
+    padding: 0px;
+    text-align: center;
+    width: 10%;
+    margin:0px 2px;
+    font-size: larger;        
 }
 .input:focus{
     outline: none !important;
