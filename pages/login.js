@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Login.module.css';
 
-const login = () => (
+const Login = () => (
   <div className={styles.containerFull}>
     
     <Head>
@@ -53,4 +53,4 @@ const login = () => (
   </div>
 );
 
-export default login;
+export default Login;

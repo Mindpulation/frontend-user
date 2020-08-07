@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Login.module.css';
 
-const register = () => (
+const Register = () => (
   <div className={styles.containerFull}>
     
     <Head>
@@ -68,4 +68,4 @@ const register = () => (
   </div>
 );
 
-export default register;
+export default Register;

@@ -43,7 +43,8 @@
 }
 
 .rowCenter{
-    width: 100%;    
+    width: 100%; 
+    margin: 10px 0px;   
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,6 +58,17 @@
     padding: 2.5px;
     margin: 8px 0px;
     display: flex;
+    flex-direction: column;
+}
+
+.colCenter{
+    width: 100%;
+    height: 100%;
+    padding: 2.5px;
+    margin: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -81,6 +93,14 @@
     align-items: center;
     padding: 0px 5px;
 }
+
+.headsign p {
+    font-size: small;
+    color: rgb(139, 139, 139);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
 .Link{
     color: rgba(9, 124, 190, 0.89);
     outline: none;
@@ -91,34 +111,31 @@
     font-weight: 400;
     outline: none;
 }
-.LinkForget{
-    font-size: 0.8rem;
-    color: rgba(9, 124, 190, 0.89);
-    float: right;
-    font-weight: 500;
-}
 .span{
     font-size: small;
     color: rgb(139, 139, 139);
     margin-top: 5px;
 }
 .input{
-    border: 0.25px solid gray;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 0.25px solid gray;
     margin-top: 5px;
-    padding: 10px;
-    padding-right: 0;
-    width: 100%;
-    font-size: smaller;        
+    padding: 0px;
+    text-align: center;
+    width: 10%;
+    margin:0px 2px;
+    font-size: larger;        
 }
 .input:focus{
     outline: none !important;
-    border: 1px solid rgb(9, 147, 211);
+    border: none;
+    border-bottom: 1.5px solid rgb(9, 147, 211);
 }
 
 .input:hover{
     outline: none !important;
-    border: 1px solid rgb(9, 147, 211);
+    border: none;
+    border-bottom: 1.5px solid rgb(9, 147, 211);
 }
 
 .button{
@@ -138,10 +155,7 @@
 .button:hover{    
     background-color: rgba(9, 147, 211, 0.76);
 }
-.agree{
-    font-size: smaller;
-    margin-left: 5px;
-}
+
 @media (max-width: 500px) {
     .header h1{
         padding-top: 10px;
