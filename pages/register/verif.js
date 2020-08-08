@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import styles from '../styles/Verify.module.css';
+import styles from '../../styles/page/Verify.module.css';
 
 import { useState } from 'react';
 
