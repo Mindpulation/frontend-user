@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import s from '../../styles/Menu.module.css'
+import s from '../../styles/component/nav/Menu.module.css'
 import { useContext } from "react";
 
 import {MenuContext} from "../../context/index.js";

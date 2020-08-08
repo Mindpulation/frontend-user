@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from '../styles/Login.module.css';
+
+import styles from '../styles/page/Login.module.css';
 
 const Login = () => (
   <div className={styles.containerFull}>
