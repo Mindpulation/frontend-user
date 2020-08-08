@@ -53,7 +53,11 @@ const Profile = () => (
         </div>
 
         <div className={Styles.Main}> 
-          
+          <div className={Styles.col}>
+            <div className={Styles.MainHead}>
+              
+            </div>
+          </div>
         </div>
         
       </div>
@@ -96,41 +100,8 @@ const Profile = () => (
           </div>
         </div>
 
-        <div className={Styles.Main}> 
-        <div className={Styles.CardProfile}>
-            <div className={Styles.col}>
+        <div className={Styles.Main}>
 
-              <img alt="foto profile"></img>
-
-              <Link href="#"><a>Update Photo</a></Link>
-
-              <div className={Styles.SpecialUser}>
-                <p className={Styles.bold}>Verified Account<span> ✔</span></p>
-                <p>Kamu belum menjadi premium member</p>
-                <button>Be Premium !</button>
-              </div>
-
-              <div className={Styles.linehr}></div>
-
-              <div className={Styles.CardSaldo}>
-                <div className={Styles.col}>
-                  
-                  <p>Dompet</p>
-
-                  <div className={Styles.ColSaldo}>
-                    <p>Saldo</p>
-                    <div className={Styles.Saldo}>
-                      <span>Sisa Saldo</span>
-                      <span>Rp 500.000</span>
-                    </div>
-                    <button>Top Up</button>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
 
       </div>
