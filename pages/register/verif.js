@@ -3,43 +3,41 @@ import Link from 'next/link';
 
 import styles from '../../styles/page/Verify.module.css';
 
-import { useState } from 'react';
-
 const Verif = () => {
 
-  const [kode, setKode] = useState("");  
+  let kode = new String();
   
-  const [k1, setK1] = useState("");
-  const [k2, setK2] = useState("");
-  const [k3, setK3] = useState("");
-  const [k4, setK4] = useState("");
-  const [k5, setK5] = useState("");
-  const [k6, setK6] = useState("");
+  let k1 = new String();
+  let k2 = new String();
+  let k3 = new String();
+  let k4 = new String();
+  let k5 = new String();
+  let k6 = new String();  
 
   const atOnChange = (e,i) => {
 
     if(i === 0){
-      setK1(e.value);
+      k1 = e.value
     }
 
     else if(i === 1){
-      setK2(e.value);
+      k2 = e.value
     }
 
     else if(i === 2){
-      setK3(e.value);
+      k3 = e.value
     }
 
     else if(i === 3){
-      setK4(e.value);
+      k4 = e.value
     }
 
     else if(i === 4){
-      setK5(e.value);
+      k5 = e.value
     }
 
     else if(i === 5){
-      setK6(e.value);
+      k6 = e.value
     }
 
   }
@@ -58,8 +56,8 @@ const Verif = () => {
   }
 
   const atClick = () => {
-    let one = k1.concat(k2).concat(k3).concat(k4).concat(k5).concat(k6);
-    console.log(one);
+    kode = k1.concat(k2).concat(k3).concat(k4).concat(k5).concat(k6);    
+    console.log(kode);
   }
 
   return(
