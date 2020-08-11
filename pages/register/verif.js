@@ -1,18 +1,22 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { useRouter } from 'next/router';
+
 import styles from '../../styles/page/Verify.module.css';
 
-const Verif = () => {
-
-  let kode = new String();
+let kode = new String();
   
-  let k1 = new String();
-  let k2 = new String();
-  let k3 = new String();
-  let k4 = new String();
-  let k5 = new String();
-  let k6 = new String();  
+let k1 = new String();
+let k2 = new String();
+let k3 = new String();
+let k4 = new String();
+let k5 = new String();
+let k6 = new String();  
+
+const Verif = () => {  
+
+  const router = useRouter();  
 
   const atOnChange = (e,i) => {
 
@@ -57,7 +61,8 @@ const Verif = () => {
 
   const atClick = () => {
     kode = k1.concat(k2).concat(k3).concat(k4).concat(k5).concat(k6);    
-    console.log(kode);
+    alert(kode);
+    router.push("/");
   }
 
   return(
