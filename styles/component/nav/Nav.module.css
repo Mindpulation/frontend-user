@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10%;  
+  padding: 15px 15%;  
 }
 
 .logo{
@@ -74,18 +74,24 @@
   margin-right: 2px;
 }
 
+@media screen and (max-width:575px){
+  .header{
+    padding: 15px 10%;
+  }
+}
+
 @media screen and (max-width:500px){
 
   .btnProfile{
-    visibility: hidden;
+    display: none;
   }
 
   .logo{
-    visibility: hidden;
+    display: none;
   }
 
   .header{
-    padding: 15px 0px;
+    padding: 15px 25px;
   }
 
   .nav{
@@ -108,7 +114,7 @@
   
   .header{    
     display: block;
-    padding: 0px 10px;
+    padding: 15px 10px;
   }
     
   .nav .wrapSearch .inputSearch{
@@ -117,7 +123,7 @@
 
 }
 
-@media screen and (max-width:175px){
+@media screen and (max-width:205px){
   .nav .wrapSearch .btnSearch .icon{
     display: none;
   }

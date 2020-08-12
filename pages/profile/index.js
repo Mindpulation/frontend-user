@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Styles from '../../styles/Profile.module.css';
+import Styles from '../../styles/page/Profile.module.css';
 
 const Profile = () => (
   <div className={Styles.FuContainer}>
