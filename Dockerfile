@@ -13,7 +13,8 @@ COPY . /usr/src/app
 
 # Building app
 #RUN yarn build
-EXPOSE 4555
+RUN yarn build
 
 # Running the app
-CMD "yarn" "dev"
+CMD "yarn" "start"
+EXPOSE 4555
