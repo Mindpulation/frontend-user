@@ -1,0 +1,111 @@
+.FuContainer{
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
+.row{
+  width: 100%;
+  padding: 2.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Header Container */
+.Header{
+  width: 100%;
+  padding: 0px 40px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HeaderCon{
+  width: 1120px;
+  height: 100%;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.Header h1{
+  font-size: 26px;
+  color: #1f1f1f;
+  margin: 0px;
+  height: 30px;
+}
+.SubDetail{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.SubDetail span{
+  margin:0px 5px;
+  font-size: 15px;
+  color: #1f1f1f;
+}
+
+/* Gallery Container */
+.Gallery{
+  width: 100%;
+  padding: 0px 40px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GalleryCon{
+  width: 1120px;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.GalleryGrid{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.Grid{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.Grid:first-child{
+  grid-column-start: span 2; 
+  grid-row-start: span 2; 
+}
+.Grid img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Main Container */
+.Main{
+  width: 100%;
+  padding: 0px 40px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Content{
+  width: 60%;
+  background-color: rgb(146, 146, 146);
+}
+.Side{
+  width: 40%;
+  background-color: rgb(131, 131, 131);
+}

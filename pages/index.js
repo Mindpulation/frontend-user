@@ -1,11 +1,10 @@
-import Nav from "../component/nav/nav";
+import Menu from "../layout/menu";
 
 const Home = () => {
   return(
-    <div>
-      <Nav></Nav>
+    <Menu>
       <div></div>
-    </div>
+    </Menu>
   )
 }
 
