@@ -50,7 +50,7 @@ const Register = () => (
         </div>
         
         <div className={styles.rowCenter}>
-          <button className={styles.button}>Selanjutnya</button>
+          <Link href={"/register/verif"}><button className={styles.button}>Selanjutnya</button></Link>
         </div>
         
         <div className={styles.row}>                  
