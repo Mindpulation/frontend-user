@@ -4,31 +4,164 @@
 
 .img{
   width: 100%;
+  max-width: 750px;
   height: auto;
+  min-height: 350px;
+  max-height: 600px;
   border-radius: 7.5px;  
+  float: right;
 }
 
 .row1 .col1{  
   width: 50%;
-  float: left;
+  float: left;  
 }
 
 .row1 .col1 .box{
   position: absolute;
-  top: 150px;
-  width: 300px;
+  margin-top: 25px;
+  width: 350px;
   min-height: 200px;    
-  height: auto;
+  height: auto;  
   border-radius: 7.5px;
-  padding: 15px;
+  padding: 25px;
   background-color: white;
-  -webkit-box-shadow: 0px 1px 11px 1px #d9d9d9;
-  -moz-box-shadow: 0px 1px 11px 1px #d9d9d9;
-  box-shadow: 0px 1px 11px 1px #d9d9d9;  
+  -webkit-box-shadow: 0px 1px 11px 1px #999999;
+  -moz-box-shadow: 0px 1px 11px 1px #999999;
+  box-shadow: 0px 1px 11px 1px #999999;  
+}
+
+.row1 .col1 .box .txtHead span{
+  font-size: large;  
+  font-weight: 900;
+  color: #333333;
+}
+
+.row1 .col1 .box .txtDes{
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+
+.row1 .col1 .box .txtDes span{
+  font-size: small;
+  color: #404040;
+  font-weight: 100;  ;
+}
+
+.row1 .col1 .box .select{
+  padding-top: 5px;
+}
+
+.row1 .col1 .box .select .txtDefine{
+  font-size: small; 
+  font-weight: 800;
+  padding-bottom: 5px;
+  padding-left: 2px;
+}
+
+.row1 .col1 .box .select select{
+  width: 100%;
+  padding: 10px 7px;    
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #bfbfbf;
+  outline: none;  
+}
+
+
+
+.row1 .col1 .box .inputValue{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 7px;
+}
+
+.row1 .col1 .box .inputValue .col50{  
+  flex-basis: 50%;    
+}
+
+.row1 .col1 .box .inputValue .col100{  
+  flex-basis: 100%;
+}
+
+.row1 .col1 .box .inputValue .col50 .txtDefine, .row1 .col1 .box .inputValue .col100 .txtDefine{
+  font-size: small; 
+  font-weight: 800;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  color: #262626;
+}
+
+.row1 .col1 .box .inputValue .col50 input, .row1 .col1 .box .inputValue .col50 select, .row1 .col1 .box .inputValue .col100 input, .row1 .col1 .box .inputValue .col100 select{
+  width: 100%;
+  outline: none;
+  padding: 7px;   
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  font-size: small;
+  color: #333333;  
+}
+
+.row1 .col1 .box .inputValue .col50 input, .row1 .col1 .box .inputValue .col100 input{
+  padding: 8px 10px;  
+}
+
+.row1 .col1 .box .btn{
+  padding: 15px 0;    
+}
+
+.row1 .col1 .box .btn button{
+  padding: 10px 25px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #3399ff;  
+  float: right;
+  outline: none;
+  cursor: pointer;  
+}
+
+.row1 .col1 .box .btn button:hover{
+  background-color: #3399ffe1;  
 }
 
 .row1 .col2{    
-  width: 80%;  
+  width: 95%;  
   float: right;
-  padding-top: 25px;
+  padding-top: 10px;  
+}
+
+@media screen and (max-width:750px){
+  .col2{
+    display: none;
+  }
+  .row1 .col1{  
+    width: 100%;
+    float: left;
+  }
+  .row1 .col1 .box{
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:575px){
+  .parent{
+    padding: 100px 10%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .parent{
+    padding: 50px 15px;
+  }
+  .row1 .col1 .box{
+    box-shadow: none;
+  } 
+  .row1 .col1 .box .btn button{
+    float: left;
+    width: 100%;
+  }
 }
