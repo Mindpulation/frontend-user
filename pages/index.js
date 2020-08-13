@@ -154,13 +154,8 @@ const Home = () => {
                   <span>Access</span>
                 </div>
                 
-                <select onChange={(e)=>{setSelAcc(e.target.value)}}>
-                  <option value="" >Choose..</option>
-                  {
-                    acc.map((e,i)=>
-                      <option key={i} value={e}>{e}</option>
-                    )
-                  }
+                <select onChange={(e)=>{setSelAcc(e.target.value)}}>                  
+                  {acc.map((e,i)=><option key={i} value={e}>{e}</option>)}
                 </select>
 
               </div>
