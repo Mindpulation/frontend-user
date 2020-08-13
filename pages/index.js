@@ -111,7 +111,7 @@ export const Pln = () => {
 
 const Home = () => {
   
-  const [selacc, setSelAcc] = useState("");
+  const [selacc, setSelAcc] = useState("Pulsa");
 
   let component;
 
@@ -177,7 +177,47 @@ const Home = () => {
 
         </div>
 
-        <div className={s.row2}>Hello</div>
+        <div className={s.row2}>
+          
+          <div className={s.colHead}>
+            <span>Top-rated product mercant</span>
+            <div className={s.txtdes}>
+              <span>Let 380,000+ real reviews from past guests help you find the perfect product</span>
+            </div>
+          </div>        
+
+          <div className={s.colCard}>
+            
+            <div className={s.card}>                        
+
+              <div className={s.photoProd}>
+                <img className={s.img}/>
+              </div>
+              
+              <div className={s.txtRate}>
+                <span></span>
+              </div>
+              
+              <div className={s.txtcomment}>
+                <span></span>
+              </div>
+              
+              <div className={s.photo}>
+                <img className={s.prof}></img>
+                <div className={s.name}>
+                  <span></span>
+                </div>
+              </div>
+
+              <div className={s.btn}>
+                <button>Show all</button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 

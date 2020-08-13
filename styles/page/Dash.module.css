@@ -1,4 +1,4 @@
-.parent{
+.parent{      
   padding: 100px 15%;
 }
 
@@ -135,6 +135,12 @@
   float: left;
 }
 
+@media screen and (min-width:1440px){
+  .parent{        
+    padding: 100px 25%;
+  }
+}
+
 @media screen and (max-width:750px){    
   .col2{
     display: none;
@@ -171,5 +177,10 @@
   .row1 .col1 .box .btn button{
     float: left;
     width: 100%;
+  }
+}
+@media screen and (max-width:270px){
+  .parent{
+    padding: 75px 10px;
   }
 }
