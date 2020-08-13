@@ -1,0 +1,12 @@
+.containerNav{
+  position: relative;
+  z-index: 999;
+}
+.containerAlt{
+  position: relative;
+  z-index: 998;
+}
+.containerBod{
+  position: relative;
+  z-index: -1;
+}

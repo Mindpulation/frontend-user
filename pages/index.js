@@ -159,7 +159,7 @@ const Home = () => {
                   {
                     acc.map((e,i)=>
                       <option key={i} value={e}>{e}</option>
-                  )
+                    )
                   }
                 </select>
 
@@ -182,7 +182,7 @@ const Home = () => {
 
         </div>
 
-        <div className={s.row2}></div>
+        <div className={s.row2}>Hello</div>
 
       </div>
 

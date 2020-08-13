@@ -28,7 +28,7 @@
   background-color: white;
   -webkit-box-shadow: 0px 1px 11px 1px #999999;
   -moz-box-shadow: 0px 1px 11px 1px #999999;
-  box-shadow: 0px 1px 11px 1px #999999;  
+  box-shadow: 0px 1px 11px 1px #999999;      
 }
 
 .row1 .col1 .box .txtHead span{
@@ -67,8 +67,6 @@
   border: 1px solid #bfbfbf;
   outline: none;  
 }
-
-
 
 .row1 .col1 .box .inputValue{
   display: flex;
@@ -130,10 +128,15 @@
 .row1 .col2{    
   width: 95%;  
   float: right;
-  padding-top: 10px;  
+  padding-top: 10px;      
 }
 
-@media screen and (max-width:750px){
+.row2{
+  width: 100%;
+  float: left;
+}
+
+@media screen and (max-width:750px){    
   .col2{
     display: none;
   }
@@ -143,22 +146,27 @@
   }
   .row1 .col1 .box{
     position: relative;
+    width: 100%;    
+  }
+  .row1 .col1 .box .btn button{
+    float: left;
     width: 100%;
   }
 }
 
 @media screen and (max-width:575px){
   .parent{
-    padding: 100px 10%;
+    padding: 75px 10%;
   }
 }
 
 @media screen and (max-width:500px){
   .parent{
-    padding: 50px 15px;
+    padding: 75px 25px;
   }
   .row1 .col1 .box{
     box-shadow: none;
+    padding: 10px;
   } 
   .row1 .col1 .box .btn button{
     float: left;
