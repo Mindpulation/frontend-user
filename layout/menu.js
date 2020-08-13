@@ -5,12 +5,12 @@ import s from '../styles/layout/Menu.module.css'
 
 const LMenu = ({children}) => {
   return(
-    <div>      
-      <Nav></Nav>
+    <div>   
+      <Nav className={s.containerNav}></Nav>         
+      <Altmenu className={s.containerAlt}></Altmenu>
       <div className={s.containerBod}>
         {children}
-      </div>
-      <Altmenu></Altmenu>
+      </div>            
     </div>
   );
 }

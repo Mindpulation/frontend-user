@@ -1,7 +1,7 @@
 .wrapNav{
   position: fixed ;
   width: 100%;      
-  /* background-color: red; */
+  background-color: white;
 }
 
 .header{  
@@ -72,6 +72,12 @@
   vertical-align: middle;
   margin-left: 2px;
   margin-right: 2px;
+}
+
+@media screen and (min-width:1440px){
+  .header{
+    padding: 15px 25%;
+  }
 }
 
 @media screen and (max-width:575px){
