@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
 import Head from 'next/head';
 import Styles from '../../styles/page/Product.module.css';
-import { BsStarFill } from "react-icons/bs";
+import { BsStarFill} from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
+import { BsFillPlusSquareFill } from "react-icons/bs";
+import { BsDashSquareFill } from "react-icons/bs";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Product = () => {
 
@@ -34,10 +37,14 @@ const Product = () => {
         {/* full container */}
         <div className={Styles.Header}>
           <div className={Styles.HeaderCon}>
-            <h1>Judul Product</h1>
+            <h1>Tittle Product</h1>
             <div className={Styles.SubDetail}>
-              <span>Ulasan</span>•
-              <span>Nama Toko</span>•
+              <span>(3)
+                <div className={Styles.ReviewStar}>
+                  <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
+                </div>
+              </span>|
+              <span>Nama Toko</span>|
               <span>Lokasi Toko</span>
             </div>
           </div>
@@ -72,6 +79,7 @@ const Product = () => {
           <div className={Styles.MainCon}>
             <div className={Styles.row}>
 
+              {/* Content */}
               <div className={Styles.Content}>
 
                 <div className={Styles.ConHeader}>
@@ -79,8 +87,9 @@ const Product = () => {
                     <div className={Styles.ConTittle}>
                       <h1>Tittle Product</h1>
                       <div className={Styles.ConSubTittle}>
-                        <span>Name shop</span>|
-                        <span>Location shop</span>
+                        <span>Name shop</span>
+                        <span>| Location shop</span>
+                        <span> Location shop</span>
                       </div>
                     </div>
                     <div className={Styles.ConProfile}>
@@ -111,7 +120,11 @@ const Product = () => {
                         <img src="/image/dash3.webp" alt="Profile Toko"/>
                       </div>
                       <div className={Styles.SubTittleReview}>
-                        <p>Amar</p>
+                        <p>Amar
+                          <div className={Styles.ReviewStar}>
+                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStar/>
+                          </div>
+                        </p>
                         <span>11 Agustus 2020</span>
                       </div>
                     </div>
@@ -126,7 +139,11 @@ const Product = () => {
                         <img src="/image/dash3.webp" alt="Profile Toko"/>
                       </div>
                       <div className={Styles.SubTittleReview}>
-                        <p>Amar</p>
+                        <p>Amar
+                          <div className={Styles.ReviewStar}>
+                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/>
+                          </div>
+                        </p>
                         <span>11 Agustus 2020</span>
                       </div>
                     </div>
@@ -141,7 +158,11 @@ const Product = () => {
                         <img src="/image/dash3.webp" alt="Profile Toko"/>
                       </div>
                       <div className={Styles.SubTittleReview}>
-                        <p>Amar</p>
+                        <p>Amar
+                          <div className={Styles.ReviewStar}>
+                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/>
+                          </div>
+                        </p>
                         <span>11 Agustus 2020</span>
                       </div>
                     </div>
@@ -160,33 +181,69 @@ const Product = () => {
                   <div className={Styles.Card}>
 
                     <div className={Styles.Product}>
-                      <div className={Styles.ProductTittle}>
-                        <p>Review (3)</p>
-                        <p>Sold </p>
+                      <p>Review</p>
+                      <div className={Styles.ProductReview}>
+                        <span>(3)</span>
+                        <div className={Styles.ReviewStar}>
+                          <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
+                        </div>
                       </div>
-                        <span><BsStarFill/> <BsStarFill/> <BsStarFill/> <BsStarFill/> <BsStarHalf/></span>
                     </div>
 
                     <div className={Styles.Price}>
-                      <div className={Styles.PriceTittle}>
-                        
+                      <p>Price</p>
+                      <div className={Styles.ProductPrice}>
+                        <span>IDR 50.000</span>
                       </div>
                     </div>
 
-                    <div className={Styles.Location}>
-                      <div className={Styles.LocationTittle}>
-
+                    <div className={Styles.Qty}>
+                      <p>Qty</p>
+                      <div className={Styles.ProductQty}>
+                        <button><BsFillPlusSquareFill/></button>
+                        <input type="number"></input>
+                        <button><BsDashSquareFill/></button>
                       </div>
                     </div>
 
                     <div className={Styles.Submit}>
-
+                      <button>
+                        <span>Add to Cart</span>
+                        <TiShoppingCart/>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
 
             </div>
+          </div>
+
+        </div>
+        <div className={Styles.FootBar}>
+          <div className={Styles.FootBarCon}>
+
+            <div className={Styles.row}>
+
+              <div className={Styles.FootTittle}>
+                <h1>Tittle Product</h1>
+                <div className={Styles.FootSubTittle}>
+                  <span>(3)
+                    <div className={Styles.ReviewStar}>
+                      <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
+                    </div>
+                  </span>|
+                  <span>IDR 50.000</span>
+                </div>
+              </div>
+              <div className={Styles.FootAct}>
+                <button>
+                  <span>Add to Cart</span>
+                  <TiShoppingCart/>
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
