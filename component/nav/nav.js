@@ -3,8 +3,10 @@ import { useContext } from 'react';
 import Link from 'next/link'
 import Head from "next/head";
 
-import s from '../../styles/Nav.module.css'
+import s from '../../styles/component/nav/Nav.module.css'
+
 import Menu from './menu'
+
 import { MenuContext } from "../../context/index.js";
 
 import { FaUserCircle, FaSearch } from "react-icons/fa";
