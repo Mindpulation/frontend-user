@@ -6,11 +6,10 @@
 }
 .row{
   width: 100%;
+  height: 100%;
   padding: 2.5px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 /* Header Container */
@@ -28,12 +27,12 @@
   padding-top: 25px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .Header h1{
   font-size: 26px;
-  color: #1f1f1f;
+  color: #222222;
   margin: 0px;
-  height: 30px;
 }
 .SubDetail{
   width: 100%;
@@ -44,7 +43,7 @@
 .SubDetail span{
   margin:0px 5px;
   font-size: 15px;
-  color: #1f1f1f;
+  color: #717171;
 }
 
 /* Gallery Container */
@@ -101,11 +100,188 @@
   align-items: center;
   justify-content: center;
 }
+.MainCon{
+  width: 1120px;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+/* Main Content */
 .Content{
   width: 60%;
-  background-color: rgb(146, 146, 146);
+  height: 100%;
+  justify-content: center;
 }
+.LineHr{
+  width: 100%;
+  padding-top: 20px;
+  border-bottom: 2.5px solid rgba(209, 209, 209, 0.5);
+}
+
+/* Content Tittle */
+.ConHeader{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ConHeader h1{
+  font-size: 22px;
+  color: #222222;
+  width: 100%;
+  margin: 0px;
+}
+.ConHeader span{
+  font-size: 16px;
+  padding:0px 3px;
+  color: #222222;
+}
+.ConTittle {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ConSubTittle{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.ConProfile{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ConProfile img{
+  width: 59px;
+  height: 59px;
+  border: 0.8px solid lightgray;
+  border-radius: 100%;
+}
+/* Content Description */
+.ConDesc{
+  width: 100%;
+  padding: 15px 0px 0px;
+}
+.ConDesc h1{
+  margin: 0px;
+  padding-left: 5px;
+  font-size: 18px;
+  color: #222222;
+}
+.ConDesc p{
+  margin: 0px;
+  font-size: 14px;
+  color: #717171;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  line-height: 25px;
+  text-align: justify;
+}
+/* Content Review */
+.ConReview{
+  width: 100%;
+  padding: 15px 0px 0px;
+}
+.ReviewHead h1{
+  margin: 0px;
+  padding-left: 5px;
+  font-size: 18px;
+  color: #222222;
+}
+.ColReview{
+  width: 100%;
+  display: block;
+  padding-top: 25px;
+}
+.TittleReview{
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+}
+.ReviewProfile{
+  width: 56px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.ReviewProfile img{
+  width: 56px;
+  height: 56px;
+  border: 0.8px solid lightgray;
+  border-radius: 100%;
+}
+.SubTittleReview{
+  width: 90%;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.SubTittleReview p{
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  margin: 0px;
+  margin-bottom: 5px;
+  justify-content: center;
+
+}
+.SubTittleReview span{
+  font-size: 14px;
+  color: #717171;
+  justify-content: center;
+}
+.Review{
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.Review span{
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+}
+
+/* Main Side */
 .Side{
   width: 40%;
-  background-color: rgb(131, 131, 131);
+  float: right;
+}
+.BoxCard{
+  width: 90%;
+  height: 100%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+.Card{
+  width: 300px;
+  height: 280px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  position: sticky;
+  top: 5px;
+  margin-right: 20px;
+  padding: 20px 40px;
+  background-color: rgb(243, 243, 243);
+}
+.Product{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width:860px){
+
 }
