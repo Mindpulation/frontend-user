@@ -3,8 +3,7 @@
 }
 
 .img{
-  width: 100%;
-  max-width: 750px;
+  width: 100%;  
   height: auto;
   min-height: 350px;
   max-height: 600px;
@@ -126,7 +125,7 @@
 }
 
 .row1 .col2{    
-  width: 95%;  
+  width: 85%;  
   float: right;
   padding-top: 10px;      
 }
@@ -147,6 +146,7 @@
   .row1 .col1 .box{
     position: relative;
     width: 100%;    
+    margin-top: 0px;
   }
   .row1 .col1 .box .btn button{
     float: left;
@@ -166,7 +166,7 @@
   }
   .row1 .col1 .box{
     box-shadow: none;
-    padding: 10px;
+    padding: 7px;
   } 
   .row1 .col1 .box .btn button{
     float: left;
