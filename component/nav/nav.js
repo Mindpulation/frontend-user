@@ -40,12 +40,10 @@ const Nav = () => {
           </nav>
 
           <div>
-            <Link href="/">
-              <div className={s.btnProfile} onClick={()=>{setStaMenu(!staMenu)}} >
-                <MdMenu className={s.icon} size={"1.2em"}></MdMenu>
-                <FaUserCircle className={s.icon} size={"1.5em"}></FaUserCircle>
-              </div>
-            </Link>          
+            <div className={s.btnProfile} onClick={()=>{setStaMenu(!staMenu)}} >
+              <MdMenu className={s.icon} size={"1.2em"}></MdMenu>
+              <FaUserCircle className={s.icon} size={"1.5em"}></FaUserCircle>
+            </div>            
             <Menu></Menu> 
           </div>
 
