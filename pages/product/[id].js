@@ -220,6 +220,7 @@ const Product = () => {
           </div>
 
         </div>
+        
         <div className={Styles.FootBar}>
           <div className={Styles.FootBarCon}>
 
@@ -246,6 +247,7 @@ const Product = () => {
 
           </div>
         </div>
+      
       </div>
     </div>
   )
