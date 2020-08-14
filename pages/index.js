@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 import Menu from "../layout/menu";
+
 import s from '../styles/page/Dash.module.css';
 
 export const Pulsa = () => {
@@ -182,39 +184,86 @@ const Home = () => {
           <div className={s.colHead}>
             <span>Top-rated product mercant</span>
             <div className={s.txtdes}>
-              <span>Let 380,000+ real reviews from past guests help you find the perfect product</span>
+              <span>Let 380,000+ real reviews from past guests help you find the perfect product</span>          
             </div>
           </div>        
 
-          <div className={s.colCard}>
-            
+          <div className={s.colcard}>            
+
             <div className={s.card}>                        
 
-              <div className={s.photoProd}>
-                <img className={s.img}/>
-              </div>
-              
-              <div className={s.txtRate}>
-                <span></span>
-              </div>
-              
-              <div className={s.txtcomment}>
-                <span></span>
-              </div>
-              
-              <div className={s.photo}>
-                <img className={s.prof}></img>
-                <div className={s.name}>
-                  <span></span>
-                </div>
-              </div>
+              <div className={s.container}>                
 
-              <div className={s.btn}>
-                <button>Show all</button>
-              </div>
+                <div className={s.photoProd}>
+                  <img src="/image/rate1.webp"/>
+                </div>
+                
+                <div className={s.txtRate}>
+                  <FaStar className={s.star}></FaStar>
+                  <span>4.90</span>
+                </div>
+                
+                <div className={s.txtcomment}>
+                  <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia urna, vitae consectetur mi. Mauris vel porttitor purus, eget laoreet mi. Pellentesque a orci purus. Cras mattis viverra justo. 
+                  </span>
+                </div>                                
+
+              </div>              
 
             </div>
 
+            <div className={s.card}>                        
+
+              <div className={s.container}>                
+
+                <div className={s.photoProd}>
+                  <img src="/image/rate2.webp" />
+                </div>
+                
+                <div className={s.txtRate}>
+                  <FaStar className ={s.star}></FaStar>
+                  <span>4.52</span>
+                </div>
+                
+                <div className={s.txtcomment}>
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia urna, vitae consectetur mi. Mauris vel porttitor purus, eget laoreet mi. Pellentesque a orci purus. Cras mattis viverra justo. 
+                  </span>
+                </div>
+                                
+
+              </div>              
+
+            </div>
+
+            <div className={s.card}>                        
+
+              <div className={s.container}>                
+
+                <div className={s.photoProd}>
+                  <img src="/image/rate1.webp" />
+                </div>
+                
+                <div className={s.txtRate}>
+                  <FaStar className={s.star}></FaStar>
+                  <span>4.22</span>
+                </div>
+                
+                <div className={s.txtcomment}>
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in lacinia urna, vitae consectetur mi. Mauris vel porttitor purus, eget laoreet mi. Pellentesque a orci purus. Cras mattis viverra justo. 
+                  </span>
+                </div>                                
+
+              </div>              
+
+            </div>
+
+          </div>
+
+          <div className={s.btn}>
+            <button>Show all</button>
           </div>
 
         </div>
