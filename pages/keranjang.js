@@ -153,7 +153,13 @@ const Keranjang = () => {
               </div>
 
               <div className={Styles.Footer}>
-                
+                <div className={Styles.FootAct}>
+                  <div className={Styles.FootCon}>
+                    <h1>Total Bill</h1>
+                    <p>IDR 150.000</p>
+                  </div>
+                  <button>CheckOut</button>
+                </div>
               </div>
 
             </div>
