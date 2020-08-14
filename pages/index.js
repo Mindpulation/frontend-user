@@ -268,6 +268,46 @@ const Home = () => {
 
         </div>
 
+        <div className={s.row3}>
+
+          <div className={s.colHead3}>
+            <span></span>
+            <div className={s.txtDes3}>
+              <span></span>
+            </div>
+          </div>
+
+          <div className={s.colBod}>
+            
+            <div className={s.conBod}>
+              
+              <div className={s.imgBod}>
+                <img></img>
+              </div>
+              
+              <div className={s.txtex}>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div className={s.txtname}>
+                <span></span>
+              </div>
+
+              <div className={s.txtname}>
+                <span></span>
+              </div>
+
+            </div>
+
+            <div className={s.btn}>
+              <button>Show All</button>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </Menu>
