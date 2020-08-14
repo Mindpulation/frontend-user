@@ -1,6 +1,6 @@
 import styles from '../../styles/page/Modal.module.css';
 import {AiOutlineLeft} from 'react-icons/ai'
-import {AiFillShopping} from 'react-icons/ai'
+import {FiShoppingBag} from 'react-icons/fi'
 
 const Modalorder = () => {
     return(
@@ -10,7 +10,7 @@ const Modalorder = () => {
                     <div className={styles.cardBody}>
                         <div className={styles.topBar}>
                             <AiOutlineLeft></AiOutlineLeft>
-                            <AiFillShopping></AiFillShopping>
+                            <FiShoppingBag></FiShoppingBag>
                         </div>
                         <h3 className={styles.title}>Summary</h3>
                         <div className={styles.itemList}>
