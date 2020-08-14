@@ -1,87 +1,111 @@
 .search{
-    padding: 100px 10%;
-    
-}
-
-.search .searchTitle{
-    margin-top: -10px;
-    margin-left: 30px;
+  padding: 115px 15%;
 }
 
 .search .date{
-    margin-left: 30px;   
+  padding-left: 2px;
 }
 
+.search .date span{
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.search .searchTitle{
+  padding-top: 7px;
+  padding-bottom: 35px;
+}
+
+.search .searchTitle span{
+  font-size: 30px;
+  font-weight: 600;
+  color: #333333;
+}
 
 .allProducts{
-    display: flex;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
-.cardProducts .containerProd {
-    
-}
-
 
 .allProducts .cardProducts{
-    flex-basis: 10%;
-    /* background-color: red; */
-    min-height: 250px;
-    /* max-width: 250px; */
-    /* box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.1),
-    -20px -20px 60px rgba(0, 0, 0, 0.1); */
+  flex-basis: 25%;    
+  padding-bottom: 25px;
 }
 
-.allProducts .cardProducts .containerProd{
-    /* background-color: blue; */
-    padding: 5px 30px;
-    min-height: 250px;
+.allProducts .cardProducts .containerProd{    
+  padding: 5px 20px;    
+  padding-left: 0px;
 }
 
 .allProducts .images img{
-    height: 200px;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 7.5px;
 }
-
-/* .allProducts .cardProducts .containerProd .best{
-    background-color: #f0f0f0f0;
-    width: 100px;
-    padding: 5px;
-    border-radius: 5px;
-} */
 
 .allProducts .cardProducts .containerProd .star{
-    font-weight: 10;
-    font-size: 13px;
-    margin-top: 10px;
-     color: #ff4d94;
+  font-weight: 10;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #ff4d94;
 }
 .allProducts .cardProducts .containerProd .ratingDetail{
-    font-size: 13px;
-    margin-top: 10px;
-    margin-left: 5px;
-    color: black;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #333333;
 }
 
 .allProducts .cardProducts .containerProd .deskripsi{
-    font-family:sans-serif ;
-    font-size: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    margin-top: 5px;
+  font-family:sans-serif ;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: 5px;
 }
 
 .allProducts .cardProducts .containerProd .idr{
-    margin-top: 10px;
-    font-size: 13px;
-    font-family: sans-serif;
-   
-   
+  margin-top: 10px;
+  font-size: 13px; 
+  color: #0d0d0d; 
+  font-weight: 600;
+}
+
+@media screen and (max-width:1000px){
+  .allProducts .cardProducts .containerProd{    
+    padding: 5px 5px;    
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width:750px){
+  .allProducts .cardProducts{
+    flex-basis: 50%;      
+  }
+}
+
+@media screen and (max-width:575px){
+  .search{
+    padding: 115px 10%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .search{
+    padding: 85px 25px;
+  }
+  .allProducts .cardProducts{
+    flex-basis: 100%;      
+  }
+}
+
+@media screen and (max-width:315px){
+  .search{
+    padding: 85px 10px;
+  } 
 }
 
 
