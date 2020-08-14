@@ -1,0 +1,170 @@
+.outer{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(190, 190, 190, 0.05);
+    display: table;
+
+}
+
+.container{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card{
+    width: 22.5%;
+    height: 75%;
+    display: inline-block;
+    background: #f0f0f0;
+    border-radius: 5% 5% 5% 5%;
+    box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.1),
+    -20px -20px 60px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.card:hover{
+    box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.2),
+    -20px -20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody{
+    padding: 5%;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.title{
+    text-align: left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.itemOrder{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5%;
+    padding: 3%;
+    text-align:left;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgOrder{
+    width: 100px;
+    text-align: left;
+}
+
+.totalOrder{
+    padding-left: 5px;
+    }
+
+.total{
+    margin-top: -50%;
+
+}
+
+.cardBottom{
+    border-radius: 5% 5% 5% 5%;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+    top: 30%;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment .title{
+    color: #999999;
+
+
+}
+
+.payment .title p{
+    font-size: 10px;
+    margin-left: -10px;
+    margin-top: 5px;
+
+}
+
+.cardPayment{
+    background-color: white;
+    height: 80px;
+    border-radius: 5px;
+    transition: 0.4s;
+    display: flex;
+
+    flex-direction: row;
+}
+
+.cardPayment .images img{
+    width: 80px;
+}
+
+.cardPayment .title p{
+    font-weight: bold;
+    font-size: 15px;
+    color: #1f1f1f;
+    padding: 15px;
+    padding-left: 5px;
+}
+
+.cardPayment .title .deskripsi{
+    color: #999999;
+    font-size: 13px;
+    margin-top: -40px;
+}
+
+.cardPayment .checkbox{
+    padding: 25px;
+}
+
+.checkboxStyle{
+    display:block;
+    cursor: pointer;
+}
+.checkboxStyle:focus{
+    display:block;
+    cursor: pointer;
+}
+.checkboxStyle:hover{
+    border: solid 1px #3399ff;
+    transition: border-width 0.4s linear;
+    border-radius: 5px;
+}
+
+.checkboxStyle .radio{
+    display: none;
+}
+
+.payment .button{
+    margin-bottom: 200px;
+}
+
+.payment .button button{
+    height: 50px;
+    background-color: chocolate;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 45px;
+    color: #f0f0f0;
+
+}
+
+
+
+
+
+
+
+
