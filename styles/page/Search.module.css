@@ -74,6 +74,12 @@
   font-weight: 600;
 }
 
+@media screen and (min-width:1440px){
+  .search{        
+    padding: 115px 25%;
+  }
+}
+
 @media screen and (max-width:1000px){
   .allProducts .cardProducts .containerProd{    
     padding: 5px 5px;    
