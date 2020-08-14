@@ -14,7 +14,12 @@
 .LineHr{
   width: 100%;
   padding-top: 20px;
-  border-bottom: 2.5px solid rgba(209, 209, 209, 0.5);
+  border-bottom: 5px solid rgba(209, 209, 209, 0.5);
+}
+.Linehr{
+  padding-top: 10px;
+  width: 100%;
+  border-bottom: 3px solid rgba(184, 184, 184, 0.699);
 }
 
 /* Main Content */
@@ -28,18 +33,344 @@
 .MainCon{
   width: 1120px;
   height: 100%;
-  padding-top: 25px;
+  padding: 25px 2.5% 0px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .Content{
-  width: 58%;
+  width: 100%;
+  height: 100%;
+  padding: 2.5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.SideContent{
+  width: 60%;
   height: 100%;
   justify-content: center;
 }
-.Side{
-  width: 42%;
+.ConHeader{
+  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+}
+.ConHeader h1{
+  font-size: 26px;
+  color: #222222;
+  margin: 0px;
+}
+
+/* Group List Item */
+.GroupList{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.8px solid rgb(221, 221, 221);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  margin-top: 15px;
+}
+.TittleGroup{
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.TittleGroup h1{
+  font-size: 22px;
+  color: #222222;
+  margin: 0px;
+}
+.ItemList{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Item{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.Item:hover{
+  background-color: rgba(240, 240, 240, 0.76);
+}
+.Item:last-child{
+  border: none;
+}
+.InfoItem{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+.InfoItem h1{
+  width: 65%;
+  font-size: 16px;
+  color: #222222;
+  margin: 0px;
+}
+.InfoItem p{
+  width: 35%;
+  font-size: 16px;
+  color: #717171;
+  margin: 15px 0px;
+  display: flex;
   justify-content: flex-end;
+}
+.ItemAct{
+  width: 100%;
+  display: flex;
+  padding: 0px 15px 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ItemAct button{
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0px;
+  outline: none;
+  font-size: 26px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #717171;
+  cursor: pointer;
+}
+.ItemQty{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ItemQty input{
+  width: 35%;
+  text-align: center;
+  font-size: 16px;
+  color: #717171;
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid rgba(184, 184, 184, 0.699);
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0px 5px;
+  transition: width 1s;
+}
+.ItemQty input:hover{
+  border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
+}
+.ItemQty input:focus{
+  width: 100%;
+  border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
+}
+.ItemQty input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ItemQty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ItemQty button{
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0px;
+  outline: none;
+  cursor: pointer;
+  color: #717171;
+}
+
+.Side{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.BoxCard{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.Card{
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 7px;
+  position: sticky;
+  top: 5px;
+  padding: 20px 20px;
+  background-color: rgba(250, 250, 250, 0.767);
+}
+.Preview{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+.Preview img{
+  width: 30%;
+  border-radius: 7px;
+}
+.PreviewDetail{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.PreviewDetail h1{
+  font-size: 16px;
+  color: #222222;
+  margin: 0px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.PreviewDetail p{
+  font-size: 14px;
+  color: #717171;
+  margin: 0px;
+  width: 100%;
+}
+.ConPreview{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+.ConPreview h1{
+  font-size: 16px;
+  color: #222222;
+  margin: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.ConPreview div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ConPreview p{
+  font-size: 16px;
+  color: #717171;
+  margin: 0px;
+}
+.CheckOut{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.CheckOut button{
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #717171;
+  font-size: 16px;
+  font-weight: 600;
+  color: whitesmoke;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+.CheckOut button:hover{
+  background-color: #222222;
+}
+.Footer{
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px -6px 16px;
+}
+@media (max-width:880px){
+  .SideContent{
+    width: 57%;
+  }
+  .Side{
+    width: 43%;
+  }
+  .BoxCard{
+    width: 95%;
+  }
+}
+@media (max-width:800px){
+  .SideContent{
+    width: 55%;
+  }
+  .Side{
+    width: 45%;
+  }
+  .Main{
+    padding: 0px 20px;
+  }
+}
+@media (max-width:768px){
+  .SideContent{
+    width: 53%;
+  }
+  .Side{
+    width: 47%;
+  }
+  .Main{
+    padding: 0px 5px;
+  }
+}
+@media (max-width:700px){
+  .Side{
+    display: none;
+    visibility: hidden;
+  }
+  .SideContent{
+    width: 100%;
+  }
+  .Main{
+    padding: 0px 15px;
+  }
+}
+@media (max-width:500px){
+  .ConHeader h1{
+    font-size: 22px;
+  }
+  .TittleGroup h1{
+    font-size: 18px;
+  }
+  .InfoItem h1{
+    font-size: 12px;
+  }
+  .InfoItem p{
+    font-size: 12px;
+  }
+  .ItemAct button{
+    font-size: 22px;
+  }
+  .ItemQty button{
+    font-size: 16px;
+  }
 }
