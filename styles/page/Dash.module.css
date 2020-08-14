@@ -1,4 +1,4 @@
-.parent{
+.parent{      
   padding: 100px 15%;
 }
 
@@ -133,9 +133,111 @@
 .row2{
   width: 100%;
   float: left;
+  padding-top: 25px;  
+  padding-bottom: 150px;
 }
 
-@media screen and (max-width:750px){    
+.row2 .colHead{ 
+  padding-top: 50px;
+  padding-bottom: 30px;  
+}
+
+.row2 .colHead span{   
+  color: #262626;
+  font-weight: 600;
+  font-size: 26px;  
+}
+
+.row2 .colHead .txtdes{
+  padding-top: 8px;
+}
+
+.row2 .colHead .txtdes span{
+  color: #717171;
+  font-size: 16px;
+  font-weight: 400;  
+}
+
+.row2 .colcard{
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row2 .colcard .card{ 
+  flex-basis: 33%;    
+}
+
+.row2 .colcard .card .container{
+  padding: 3px;
+} 
+
+.row2 .colcard .card .container .photoProd img{
+  width: 100%;  
+  border-radius: 7.5px;  
+}
+
+.row2 .colcard .card .container .txtRate{
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+.row2 .colcard .card .container .txtRate .star{
+  color: #ff4d94;
+  font-size: 14px;  
+  vertical-align: text-top;
+}
+
+.row2 .colcard .card .container .txtRate span{
+  margin-left: 4px;  
+  font-size: 13px;
+  font-weight: 100;  
+}
+
+.row2 .colcard .card .container .txtcomment{
+  margin-top: 6px;
+  margin-bottom: 12px;
+  color: #333333;    
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.row2 .btn button{
+  border: 1px solid #262626;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+}
+
+.row2 .btn button:hover{
+  border: 1px solid #404040;
+}
+
+@media screen and (min-width:1440px){
+  .parent{        
+    padding: 100px 25%;
+  }
+}
+
+@media screen and (max-width:750px){  
+  .row2 .colcard .card{ 
+    flex-basis: 100%;    
+  }  
+  .row2{
+    padding-top: 0px;      
+  }
+  .row2 .colHead{ 
+    padding-top: 25px;
+    padding-bottom: 25px;  
+  }
   .col2{
     display: none;
   }
@@ -152,6 +254,9 @@
     float: left;
     width: 100%;
   }
+  .row2 .btn button{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:575px){
@@ -161,6 +266,9 @@
 }
 
 @media screen and (max-width:500px){
+  .row2 .colHead{ 
+    padding-top: 0px;    
+  }
   .parent{
     padding: 75px 25px;
   }
@@ -171,5 +279,10 @@
   .row1 .col1 .box .btn button{
     float: left;
     width: 100%;
+  }
+}
+@media screen and (max-width:270px){
+  .parent{
+    padding: 75px 10px;
   }
 }
