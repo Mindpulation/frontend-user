@@ -8,7 +8,7 @@ import { BsStarFill} from "react-icons/bs";
 
 const Keranjang = () => {
 
-  const [staModalCheckout] = useContext(MCheckoutContext);
+  const [staModalCheckout, setStaModalCheckout] = useContext(MCheckoutContext);
 
   let component;
 
@@ -19,6 +19,31 @@ const Keranjang = () => {
     component = <Modalorder></Modalorder>
   }
 
+  const data = {
+      "data":{
+        "item":[
+          {
+            "idBarang":"98777373",
+            "idToko":"Reza Computer",
+            "name":"Indomie",
+            "deskripsi":"Makanan ringan enak banget",
+            "totalUlasan":10,
+            "totalTerjual":23,
+            "keyword":"Hello",
+            "rating":4.5,
+            "ulasan":[
+              {
+                "name":"Reza",
+                "ulasan":"Baguss",
+                "rating":5
+              }
+            ],
+            "price":"1500",
+            "stok":10
+          }
+        ]
+      }
+  }
   return(
     <div>
       {component}
@@ -292,7 +317,7 @@ const Keranjang = () => {
                     </div>
 
                     <div className={Styles.CheckOut}>
-                      <button>CheckOut</button>
+                      <button onClick={()=>setStaModalCheckout(true)}>CheckOut</button>
                     </div>
                     
 
@@ -306,7 +331,7 @@ const Keranjang = () => {
                     <h1>Total Bill</h1>
                     <p>IDR 150.000</p>
                   </div>
-                  <button>CheckOut</button>
+                  <button onClick={()=>setStaModalCheckout(true)}>CheckOut</button>
                 </div>
               </div>
 

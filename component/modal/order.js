@@ -3,15 +3,25 @@ import {AiOutlineLeft} from 'react-icons/ai'
 import {FiShoppingBag} from 'react-icons/fi'
 import {RiWallet2Line} from 'react-icons/ri'
 import {RiCloseLine} from 'react-icons/ri'
+import { useContext } from "react";
+import { MCheckoutContext } from "../../context/index.js";
+
 
 const Modalorder = () => {
+
+    const [staModalCheckout, setStaModalCheckout] = useContext(MCheckoutContext);
+
+
     return(
         <div className={styles.outer}>
             <div className={styles.container}>
                 <div className={styles.card}>
                     <div className={styles.cardBody}>
                         <div className={styles.topBar}>
-                            <RiCloseLine className={styles.closeBar}></RiCloseLine>
+                            <button className={styles.closeBar} onClick={()=>setStaModalCheckout(false)}>
+                                <RiCloseLine></RiCloseLine>
+                            </button>
+                            
                             <FiShoppingBag></FiShoppingBag>
                         </div>
                         <h3 className={styles.title}>Summary</h3>
