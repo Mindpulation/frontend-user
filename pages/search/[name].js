@@ -1,12 +1,35 @@
 
 import Head from 'next/head';
+import { useRouter } from "next/router";
+
 import Menu from "../../layout/menu.js";
+
 import { FaStar } from "react-icons/fa";
+
 import s from '../../styles/page/Search.module.css';
 
+const date = new Date();
+
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+const getFullDate = () => {
+  return `${months[date.getMonth()]} ${date.getDate()}  ${date.getFullYear()}`
+}
 
 const SearchPage = () => {    
     
+  let now = getFullDate();
+
+  let param = new String();
+
+  const router = useRouter();
+
+  const query = router.query;
+
+  if(query.name != undefined){
+    param = query.name;
+  }  
+
   return(
 
     <Menu>
@@ -20,11 +43,11 @@ const SearchPage = () => {
       <div className={s.search}>
         
         <div className={s.date}>
-          <span>250+ Sold - Aug 14 - Sep 2020</span>            
+          <span>250+ Result - {now}</span>            
         </div>
 
         <div className={s.searchTitle}>
-            <span>Search - Air Conditioner</span>
+          <span>Search - {param}</span>
         </div>
 
         <div className={s.allProducts}>                        
