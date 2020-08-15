@@ -70,8 +70,11 @@
   border: 1.8px solid #dddddd;
   border-radius: 7px;
   background-color: #f7f7f7;
+  box-shadow: #0000001e 0px 6px 16px;
+  margin-top: 30px;
+}
+.GroupList:hover{
   box-shadow: #00000033 0px 6px 16px;
-  margin-top: 15px;
 }
 .TittleGroup{
   width: 100%;
@@ -136,14 +139,14 @@
 }
 .ItemAct p{
   margin: 0px;
-  font-size: 16px;
+  font-size: 18px;
   color: #222222;
   padding-left: 5px;
 }
 .ItemAct .Review{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .ItemQty{
@@ -172,7 +175,7 @@
   color: #222222;
   margin: 0px;
   font-weight: 600;
-  padding: 0px;
+  padding-left: 5px;
 }
 .ItemQty input{
   width: 31%;
@@ -223,16 +226,19 @@
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .Card{
   width: 100%;
   height: 100%;
-  box-shadow: #00000033 0px 6px 16px;
+  box-shadow: #0000001e 0px 6px 16px;
   border: 1px solid #dddddd;
   border-radius: 7px;
   padding: 20px 20px;
   background-color: #f7f7f7;
+}
+.Card:hover{
+  box-shadow: #00000033 0px 6px 16px;
 }
 .Preview{
   width: 100%;
