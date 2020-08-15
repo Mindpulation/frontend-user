@@ -56,8 +56,7 @@
   color: #333333;
 }
 
-.allProducts .cardProducts .containerProd .deskripsi{
-  font-family:sans-serif ;
+.allProducts .cardProducts .containerProd .deskripsi{  
   font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
