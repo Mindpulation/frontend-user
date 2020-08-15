@@ -1,0 +1,270 @@
+.container{
+  padding: 25px 15%;  
+}
+
+.Gallery{
+  width: 100%;  
+  height: auto;
+}
+
+.GalleryCon{  
+  height: 100%;      
+}
+
+.GalleryGrid{  
+  width: 100%;  
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  overflow: hidden;
+  border-radius: 7.5px;
+}
+
+.Grid{  
+  height: 100%;
+  width: 100%;
+}
+
+.Grid:first-child{
+  grid-column-start: span 2; 
+  grid-row-start: span 2; 
+}
+
+.Grid img{
+  width: 100%;
+  height: 100%;
+}
+
+.bod{
+  padding-top: 50px;
+  width: 100%;
+  float: left;
+  padding-bottom: 150px;
+}
+
+.bod .col60{
+  width: 60%;
+  float: left;
+}
+
+.bod .col60 .txthead{
+  padding-top: 10px;
+  font-size: xx-large;
+  font-weight: 600;
+  color: #333333;
+}
+
+.bod .col60 .txtdes{
+  padding-top: 7px;  
+  padding-bottom: 20px;
+}
+
+.bod .col60 .txtdes .icon{
+  vertical-align: middle;
+  color: #ff4d94; 
+}
+
+.bod .col60 .txtdes .rate{
+  font-weight: 400;
+  color: #333333;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.bod .col60 .txtdes .qrate{
+  font-weight: 100;
+  padding-left: 3px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.bod .col60 .hr{    
+  opacity: 0.3;  
+}
+
+.bod .col60 .post{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+.bod .col60 .post .user .txtname{
+  font-size: x-large;  
+  color: #333333;
+}
+
+.bod .col60 .post .user .ci{
+  font-size: 15px;
+  font-weight: 100; 
+  color: #404040; 
+}
+
+.bod .col60 .post .poto img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.bod .col60 .txtdet{
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* display: -webkit-box; */
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #333333;
+}
+
+.bod .col60 .btn{
+  padding-top: 15px;
+}
+
+.bod .col60 .btn button{
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.bod .col40{
+  width: 40%;
+  float: left;    
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.bod .col40 .con{
+  padding-left: 30px;    
+}
+
+.bod .col40 .con .card{  
+  margin-top: 15px;
+  padding: 25px 20px;
+  -webkit-box-shadow: 0px 0px 9px -3px #a6a6a6;
+  -moz-box-shadow: 0px 0px 9px -3px #a6a6a6;
+  box-shadow: 0px 0px 9px -3px #a6a6a6;
+  border: 1px solid #d9d9d9;
+  border-radius: 7.5px;  
+  padding-bottom: 15px;
+}
+
+.bod .col40 .con .card .txtprice{
+  font-weight: 400;
+  font-size: 20px;
+  color: #333333;
+  padding-bottom: 12px;
+}
+
+.bod .col40 .con .card .txtprice .txtcur{
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.bod .col40 .con .card .txtinput{
+  padding-bottom: 12px;
+}
+
+.bod .col40 .con .card .txtinput input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #333333;
+}
+
+.bod .col40 .con .card .txtinput input:hover{
+  border: 1.5px solid #333333;
+}
+
+
+.bod .col40 .con .card .btnAdd{
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+.bod .col40 .con .card .btnAdd button{
+  width: 100%;
+  padding: 10px 15px;  
+  background-color: #66b3ff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width:1440px){
+  .container{
+    padding: 25px 25%;
+  }
+}
+
+@media screen and (max-width:900px){
+  .bod{
+    padding-top: 15px;    
+  }
+  .bod .col60{
+    width: 100%;
+    float: left;
+  }
+  .bod .col40{
+    width: 100%;
+    float: left;
+  }
+  .bod .col40 .con{
+    padding-left: 0px;    
+  }
+  .bod .col40 .con .card{  
+    margin-top: 25px;
+    padding: 0px;   
+    border: none;   
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; 
+  }
+}
+
+@media screen and (max-width:768px){
+  .GalleryGrid{      
+    grid-template-columns: auto auto auto;     
+  }
+  .GalleryGrid .Grid:nth-child(4){
+    display: none;
+    visibility: hidden;
+  }
+  .GalleryGrid .Grid:nth-child(5){
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:575px){
+  .container{
+    padding: 25px 10%;  
+  }
+}
+
+@media screen and (max-width:500px){
+  .container{
+    padding: 25px 25px;  
+  }
+  .GalleryGrid .Grid:nth-child(2){
+    display: none;
+    visibility: hidden;
+  }
+  .GalleryGrid .Grid:nth-child(3){
+    display: none;
+    visibility: hidden;
+  }
+  .GalleryGrid{
+    grid-template-columns: auto auto;
+  }
+}
