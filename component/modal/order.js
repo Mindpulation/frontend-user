@@ -1,6 +1,8 @@
 import styles from '../../styles/page/Modal.module.css';
 import {AiOutlineLeft} from 'react-icons/ai'
 import {FiShoppingBag} from 'react-icons/fi'
+import {RiWallet2Line} from 'react-icons/ri'
+import {RiCloseLine} from 'react-icons/ri'
 
 const Modalorder = () => {
     return(
@@ -9,7 +11,7 @@ const Modalorder = () => {
                 <div className={styles.card}>
                     <div className={styles.cardBody}>
                         <div className={styles.topBar}>
-                            <AiOutlineLeft></AiOutlineLeft>
+                            <RiCloseLine className={styles.closeBar}></RiCloseLine>
                             <FiShoppingBag></FiShoppingBag>
                         </div>
                         <h3 className={styles.title}>Summary</h3>
@@ -63,14 +65,13 @@ const Modalorder = () => {
                                 <label className={styles.checkboxStyle} id="checkboxStyle">
                                     <div className={styles.cardPayment}>
                                         <div className={styles.images}>
-                                            <img src="/image/gopay.png" />
+                                            <RiWallet2Line></RiWallet2Line>
                                         </div>
-                                        <div className={styles.subtitle}>
-                                            <p>Using Payroll</p>
-                                            <p className={styles.deskripsi}>Default Method</p>
+                                        <div className={styles.titlePayment}>
+                                            <h4 className={styles.itemPayment}>Using Payroll</h4>
                                         </div>
                                         <div className={styles.radio}>
-                                            <input type="radio" name="pilih" value="gopay" id="gopay" />
+                                            <input type="radio" name="pilih" value="payroll" id="payroll" />
                                         </div>
                                     </div>
                                 </label>
