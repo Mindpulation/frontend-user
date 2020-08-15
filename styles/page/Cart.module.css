@@ -11,12 +11,12 @@
 .LineHr{
   width: 100%;
   padding-top: 20px;
-  border-bottom: 5px solid rgba(209, 209, 209, 0.5);
+  border-bottom: 5px solid #cacacaa9;
 }
 .Linehr{
   padding-top: 10px;
   width: 100%;
-  border-bottom: 3px solid rgba(184, 184, 184, 0.699);
+  border-bottom: 3px solid #cacacaa9;
 }
 
 /* Main Content */
@@ -67,16 +67,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1.8px solid rgb(221, 221, 221);
+  border: 1.8px solid #dddddd;
   border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  background-color: #f7f7f7;
+  box-shadow: #00000033 0px 6px 16px;
   margin-top: 15px;
 }
 .TittleGroup{
   width: 100%;
   height: 100%;
   padding: 20px 15px;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid #dddddd;
 }
 .TittleGroup h1{
   font-size: 22px;
@@ -93,10 +94,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid #dddddd;
 }
 .Item:hover{
-  background-color: rgba(240, 240, 240, 0.76);
+  background-color: #f0f0f0da;
 }
 .Item:last-child{
   border: none;
@@ -129,9 +130,30 @@
   padding: 20px 15px;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #ff4d94;
+}
+.ItemAct p{
+  margin: 0px;
+  font-size: 16px;
+  color: #222222;
+  padding-left: 5px;
+}
+.ItemAct .Review{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.ItemQty{
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
-.ItemAct button{
+.ItemQty button{
   width: 26px;
   height: 26px;
   display: flex;
@@ -141,45 +163,42 @@
   padding: 0px;
   outline: none;
   font-size: 26px;
-  background-color: rgba(255, 255, 255, 0);
-  color: #717171;
+  background-color: #ffffff00;
+  color: #3399ff;
   cursor: pointer;
 }
-.ItemQty{
-  width: 100px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 .ItemQty p{
-  font: 18px;
+  font-size: 16px;
   color: #222222;
   margin: 0px;
+  font-weight: 600;
+  padding: 0px;
 }
 .ItemQty input{
-  width: 50%;
+  width: 31%;
   text-align: center;
   font-size: 16px;
-  color: whitesmoke;
+  color: #f5f5f5;
   border: none;
   outline: none;
   border-radius: 7px;
-  padding: 5px 0px;
-  background-color: rgba(112, 112, 112, 0.87);
-  margin: 0px 5px;
+  padding: 5px 7px;
+  background-color: #3399ff;
+  margin-left: 5px;
   transition: width 1s;
 }
 .ItemQty input:hover{
-  border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
+  border-bottom: 2px solid #8a8a8ac4;
   color: #717171;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #ffffff00;
+  border-radius: 0px;
 }
 .ItemQty input:focus{
   width: 100%;
   color: #717171;
-  border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
-  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+  border-bottom: 2px solid #8a8a8ac4;
+  background-color: #ffffff00;
 }
 .ItemQty input::-webkit-outer-spin-button{
   -webkit-appearance: none;
@@ -209,11 +228,11 @@
 .Card{
   width: 100%;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-  border: 1px solid rgb(221, 221, 221);
+  box-shadow: #00000033 0px 6px 16px;
+  border: 1px solid #dddddd;
   border-radius: 7px;
   padding: 20px 20px;
-  background-color: rgba(250, 250, 250, 0.767);
+  background-color: #f7f7f7;
 }
 .Preview{
   width: 100%;
@@ -280,7 +299,7 @@
   width: 100px;
   height: 30px;
   border: none;
-  background-color: #717171;
+  background-color: #3399ff;
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
@@ -292,7 +311,7 @@
   cursor: pointer;
 }
 .CheckOut button:hover{
-  background-color: #222222;
+  background-color: #3399ffe1;
 }
 .Footer{
   width: 100%;
@@ -300,8 +319,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px -6px 16px;
-  background-color: rgba(250, 250, 250, 0.952);
+  box-shadow: #00000033 0px -6px 16px;
+  background-color: #f0f0f0ee;
   visibility: hidden;
   display: none;
 }
@@ -335,10 +354,10 @@
   width: 18%;
   height: 100%;
   border: none;
-  background-color: #717171;
+  background-color: #3399ff;
   font-size: 12px;
   font-weight: 600;
-  color: whitesmoke;
+  color: #f5f5f5;
   border-radius: 7px;
   display: flex;
   justify-content: center;
@@ -347,7 +366,7 @@
   cursor: pointer;
 }
 .FootAct button:hover{
-  background-color: #222222;
+  background-color: #3399ffe1;
 }
 @media (max-width:880px){
   .SideContent{
@@ -415,7 +434,7 @@
     font-size: 22px;
   }
   .ItemQty button{
-    font-size: 16px;
+    font-size: 26px;
   }
   .FootCon h1{
     font-size: 16px;

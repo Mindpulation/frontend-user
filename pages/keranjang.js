@@ -4,6 +4,7 @@ import Styles from "../styles/page/Cart.module.css";
 import Modalorder from "../component/modal/order.js";
 import { MCheckoutContext } from "../context/index.js";
 import { IoMdTrash } from "react-icons/io";
+import { BsStarFill} from "react-icons/bs";
 
 const Keranjang = () => {
 
@@ -52,17 +53,22 @@ const Keranjang = () => {
 
                     <div className={Styles.Item}>
                       <div className={Styles.InfoItem}>
-                        <h1>Product Name hjjsacc kjsack kscbmm asckb</h1>
-                        <p>IDR 500.000</p>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
                       </div>
                       <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
                         <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
                           <p>Qty</p>
                           <input type="number"></input>
-                          
                         </div>
                       </div>
                     </div>
@@ -73,151 +79,18 @@ const Keranjang = () => {
                         <p>IDR 50.000</p>
                       </div>
                       <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                         
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
                         </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div className={Styles.GroupList}>
-
-                  <div className={Styles.TittleGroup}>
-                    <h1>Nama Toko</h1>
-                  </div>
-
-                  <div className={Styles.ItemList}>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name hjjsacc kjsack kscbmm asckb</h1>
-                        <p>IDR 500.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
+                        
                         <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
                           <p>Qty</p>
                           <input type="number"></input>
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name</h1>
-                        <p>IDR 50.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div className={Styles.GroupList}>
-
-                  <div className={Styles.TittleGroup}>
-                    <h1>Nama Toko</h1>
-                  </div>
-
-                  <div className={Styles.ItemList}>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name hjjsacc kjsack kscbmm asckb</h1>
-                        <p>IDR 500.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name</h1>
-                        <p>IDR 50.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div className={Styles.GroupList}>
-
-                  <div className={Styles.TittleGroup}>
-                    <h1>Nama Toko</h1>
-                  </div>
-
-                  <div className={Styles.ItemList}>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name hjjsacc kjsack kscbmm asckb</h1>
-                        <p>IDR 500.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                          
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Item}>
-                      <div className={Styles.InfoItem}>
-                        <h1>Product Name</h1>
-                        <p>IDR 50.000</p>
-                      </div>
-                      <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
-                        <div className={Styles.ItemQty}>
-                          <p>Qty</p>
-                          <input type="number"></input>
-                          
                         </div>
                       </div>
                     </div>
@@ -240,13 +113,152 @@ const Keranjang = () => {
                         <p>IDR 50.000</p>
                       </div>
                       <div className={Styles.ItemAct}>
-                        <button>
-                          <IoMdTrash/>
-                        </button>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
                         <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
                           <p>Qty</p>
                           <input type="number"></input>
+                        </div>
+                      </div>
+                    </div>
 
+                    <div className={Styles.Item}>
+                      <div className={Styles.InfoItem}>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
+                      </div>
+                      <div className={Styles.ItemAct}>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
+                        <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
+                          <p>Qty</p>
+                          <input type="number"></input>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div className={Styles.GroupList}>
+
+                  <div className={Styles.TittleGroup}>
+                    <h1>Nama Toko</h1>
+                  </div>
+
+                  <div className={Styles.ItemList}>
+
+                    <div className={Styles.Item}>
+                      <div className={Styles.InfoItem}>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
+                      </div>
+                      <div className={Styles.ItemAct}>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
+                        <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
+                          <p>Qty</p>
+                          <input type="number"></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={Styles.Item}>
+                      <div className={Styles.InfoItem}>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
+                      </div>
+                      <div className={Styles.ItemAct}>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
+                        <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
+                          <p>Qty</p>
+                          <input type="number"></input>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div className={Styles.GroupList}>
+
+                  <div className={Styles.TittleGroup}>
+                    <h1>Nama Toko</h1>
+                  </div>
+
+                  <div className={Styles.ItemList}>
+
+                    <div className={Styles.Item}>
+                      <div className={Styles.InfoItem}>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
+                      </div>
+                      <div className={Styles.ItemAct}>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
+                        <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
+                          <p>Qty</p>
+                          <input type="number"></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={Styles.Item}>
+                      <div className={Styles.InfoItem}>
+                        <h1>Product Name</h1>
+                        <p>IDR 50.000</p>
+                      </div>
+                      <div className={Styles.ItemAct}>
+                        <div className={Styles.Review}>
+                          <BsStarFill/>
+                          <p>3.44</p>
+                          <p>(100)</p>
+                        </div>
+                        
+                        <div className={Styles.ItemQty}>
+                          <button>
+                            <IoMdTrash/>
+                          </button>
+                          <p>Qty</p>
+                          <input type="number"></input>
                         </div>
                       </div>
                     </div>
