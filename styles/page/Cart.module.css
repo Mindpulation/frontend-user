@@ -1,8 +1,5 @@
 .FuContainer{
   width: 100%;
-  min-height: 100vh;
-  align-items: center;
-  overflow: hidden;
 }
 .row{
   width: 100%;
@@ -27,16 +24,14 @@
   width: 100%;
   padding: 0px 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .MainCon{
   width: 1120px;
   height: 100%;
-  padding: 25px 2.5% 0px;
+  margin: auto;
+  padding: 25px 0px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 .Content{
   width: 100%;
@@ -157,24 +152,34 @@
   align-items: center;
   justify-content: flex-end;
 }
+.ItemQty p{
+  font: 18px;
+  color: #222222;
+  margin: 0px;
+}
 .ItemQty input{
-  width: 35%;
+  width: 50%;
   text-align: center;
   font-size: 16px;
-  color: #717171;
+  color: whitesmoke;
   border: none;
   outline: none;
-  border-bottom: 1.5px solid rgba(184, 184, 184, 0.699);
-  background-color: rgba(255, 255, 255, 0);
+  border-radius: 7px;
+  padding: 5px 0px;
+  background-color: rgba(112, 112, 112, 0.87);
   margin: 0px 5px;
   transition: width 1s;
 }
 .ItemQty input:hover{
   border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
+  color: #717171;
+  background-color: rgba(255, 255, 255, 0);
 }
 .ItemQty input:focus{
   width: 100%;
+  color: #717171;
   border-bottom: 1.5px solid rgba(124, 124, 124, 0.863);
+  background-color: rgba(255, 255, 255, 0);
 }
 .ItemQty input::-webkit-outer-spin-button{
   -webkit-appearance: none;
@@ -184,25 +189,15 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.ItemQty button{
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  padding: 0px;
-  outline: none;
-  cursor: pointer;
-  color: #717171;
-}
 
 .Side{
   width: 40%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 5px;
 }
 .BoxCard{
   width: 90%;
@@ -217,8 +212,6 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 7px;
-  position: sticky;
-  top: 5px;
   padding: 20px 20px;
   background-color: rgba(250, 250, 250, 0.767);
 }
@@ -386,7 +379,7 @@
     width: 47%;
   }
   .Main{
-    padding: 0px 5px;
+    padding: 0px 15px;
   }
 }
 @media (max-width:700px){
@@ -403,9 +396,6 @@
   }
   .SideContent{
     width: 100%;
-  }
-  .Main{
-    padding: 0px 15px;
   }
 }
 @media (max-width:500px){
@@ -440,9 +430,6 @@
 @media (max-width:320px){
   .Main{
     padding: 0px;
-  }
-  .MainCon{
-    padding: 25px 0px;
   }
   .ConHeader h1{
     padding-left: 10px;
