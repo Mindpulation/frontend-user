@@ -113,7 +113,7 @@ export const Pln = () => {
 
 const Home = () => {
   
-  const [selacc, setSelAcc] = useState("Pulsa");
+  const [selacc, setSelAcc] = useState("Pulsa");  
 
   let component;
 
