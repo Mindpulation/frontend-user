@@ -34,30 +34,6 @@ const Modalorder = () => {
                                     <h3 className={styles.itemPrice}>IDR. 105K</h3>
                                 </div>
                             </div>
-                            <div className={styles.itemOrder}>
-                                <img className={styles.imgOrder} src="/image/adidas.webp"></img>
-                                <div className={styles.totalOrder}>
-                                    <h4 className={styles.itemTitle}>Adidas Superstar</h4>
-                                    <div className={styles.itemTotal}> Total :  1 </div>
-                                    <h3 className={styles.itemPrice}>IDR. 105K</h3>
-                                </div>
-                            </div>
-                            <div className={styles.itemOrder}>
-                                <img className={styles.imgOrder} src="/image/adidas.webp"></img>
-                                <div className={styles.totalOrder}>
-                                    <h4 className={styles.itemTitle}>Adidas Superstar</h4>
-                                    <div className={styles.itemTotal}> Total :  1 </div>
-                                    <h3 className={styles.itemPrice}>IDR. 105K</h3>
-                                </div>
-                            </div>
-                            <div className={styles.itemOrder}>
-                                <img className={styles.imgOrder} src="/image/adidas.webp"></img>
-                                <div className={styles.totalOrder}>
-                                    <h4 className={styles.itemTitle}>Adidas Superstar</h4>
-                                    <div className={styles.itemTotal}> Total :  1 </div>
-                                    <h3 className={styles.itemPrice}>IDR. 105K</h3>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div className={styles.cardBottom}>
