@@ -20,6 +20,11 @@ export const Card = () => {
   const query = router.query;
 
   let param = new String();
+
+  const atDetail = (param) => {
+    alert(param);
+    router.push("/product/detail/[id]", "/product/detail/"+param);
+  }
   
   if(query.name != undefined){
     param = query.name;                    
@@ -31,9 +36,10 @@ export const Card = () => {
   return(
     <div className={s.allProducts}>
     {            
-      data.map((e, i)=>
+      data.map((e,i)=>{
       
-      <div className={s.cardProducts} key={i}>
+      return( 
+      <div  onClick={()=>{alert("Hello")}} className={s.cardProducts} key={i}>
         <div className={s.containerProd}>
 
           <div className={s.best}>
@@ -41,7 +47,7 @@ export const Card = () => {
           </div>
 
           <div className={s.images}>
-            <img src="../image/rate2.webp" />
+            <img src="../image/rate2.webp"  onClick={()=>{alert("Hello")}}  />
           </div>
                 
           <div className={s.star}>
@@ -55,13 +61,13 @@ export const Card = () => {
           
           <div className={s.idr}>
             IDR. {e.price}
-          </div>
+          </div>          
 
         </div>
-      </div>    
+      </div> 
+      )   
 
-      )
-    } 
+      })} 
 
     </div>
   )
@@ -114,9 +120,7 @@ const SearchPage = () => {
           <span>Search - {param}</span>
         </div>
 
-        <div>                                  
-          {comp}
-        </div>
+        {comp}        
         
       </div>      
 
