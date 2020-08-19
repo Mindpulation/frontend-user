@@ -1,10 +1,10 @@
 .containerNav{
-  position: relative;
+  position: relative;  
   z-index: 999;
 }
-.containerAlt{
+.containerAlt{  
   position: relative;
-  z-index: 998;
+  z-index: 999;
 }
 .containerBod{    
   position: relative;

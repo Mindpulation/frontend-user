@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
-import Menu from "../layout/menu";
+import Menu from "../layout/dashmenu";
 
 import s from '../styles/page/Dash.module.css';
 
