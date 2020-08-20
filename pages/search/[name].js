@@ -39,7 +39,7 @@ export const Card = () => {
       data.map((e,i)=>{
       
       return( 
-      <div  onClick={()=>{alert("Hello")}} className={s.cardProducts} key={i}>
+      <div  onClick={()=>{atDetail(e._id)}} className={s.cardProducts} key={i}>
         <div className={s.containerProd}>
 
           <div className={s.best}>
@@ -47,7 +47,7 @@ export const Card = () => {
           </div>
 
           <div className={s.images}>
-            <img src="../image/rate2.webp"  onClick={()=>{alert("Hello")}}  />
+            <img src="../image/rate2.webp"/>
           </div>
                 
           <div className={s.star}>

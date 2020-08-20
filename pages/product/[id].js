@@ -1,257 +1,198 @@
+import useSWR from 'swr';
+import Head from "next/head";
+
+import Menu from '../../layout/menu';
+import Loading from '../../component/loading'
+
 import { useRouter } from "next/router";
-import Head from 'next/head';
-import Styles from '../../styles/page/Product.module.css';
 import { BsStarFill} from "react-icons/bs";
-import { BsStarHalf } from "react-icons/bs";
-import { BsStar } from "react-icons/bs";
-import { BsFillPlusSquareFill } from "react-icons/bs";
-import { BsDashSquareFill } from "react-icons/bs";
-import { TiShoppingCart } from "react-icons/ti";
+import { getDetBarang } from "../../controller/req.js";
 
-const Product = () => {
+import s from "../../styles/page/Altprod.module.css";
 
-  let add = 0
+export const Bod = () => {
+
+  let data = null;  
 
   const router = useRouter();
+  const query = router.query;
 
-  const query = router.query;  
+  let param = new String();
 
   if(query.id != undefined){
-    console.log(query.id);
+    param = query.id;             
   }
 
-  const addFunc = () => {
-    add++;
-    console.log(add);
+  const tmp = useSWR(`http://103.27.206.22:3000/v1/api/barang/${param}`, getDetBarang);
+
+  data = tmp.data;
+
+  return(
+
+    <div className={s.bod}>
+        
+      <div className={s.col60}>
+        
+        <div className={s.txthead}>
+          <span>{data[0].name}</span>
+        </div>
+        
+        <div className={s.txtdes}>
+          <BsStarFill className={s.icon}></BsStarFill>
+          <span className={s.rate}>{data[0].rating}</span>
+          <span className={s.qrate}>{`(${data[0].totalUlasan})`}</span>
+        </div>
+
+        <hr className={s.hr}></hr>
+
+        <div className={s.post}>              
+          
+          <div className={s.user}>              
+            <div className={s.txtname}>
+              <span>Product post by Rezaaaa</span>
+            </div>                
+            <span className={s.ci}>Kota Bekasi, Indonesia</span>
+          </div>
+
+          <div className={s.poto}>
+            <img src="/image/dash3.webp" alt="Profile Toko"/>
+          </div>
+
+        </div>            
+
+        <div className={s.txtdet}>
+          <span>
+            Newly remodeled studio suite, private entrance, located in the Parkside/Upper Sunset area of San Francisco. Studio suite is attached to an occupied family home. Close to restaurants and shops in the West Portal area. Stern Grove Park in walking distance. Ocean Beach, Golden Gate Park, and San Francisco Zoo all within one mile. Transportation on Muni or the street car to anywhere in the city just one block away. Parking in the neighborhood is easy with 24 hour street parking down the street.
+
+            The space
+            Enter privately into your own unit of a family home. Unit has a queen size bed and full bath with shower. Kitchenette includes microwave, Keurig coffee machine, toaster oven, refrigerator, silverware, cups, plates, utensils.
+
+            Guest access
+            Use of entire in law unit
+
+            Other things to note
+            -Public transportation to get anywhere in SF or Bay Area 1 block away.
+            -24 hour parking (free) 1 block away
+            - Stern Grove .3
+            -TPC Harding Park golf course 1.4
+            -SFSU 1.4
+            -SF Zoo 1.5
+            -Twin Peaks 1.7
+            -Market street 1.9
+            -Golden Gate Park 1.9
+            -Olympic club golf course 2.4
+            -USF 2.8
+            -Cliff house 3.2
+            -Lombard Street 4.0
+            -Union square 5.0
+            -Golden Gate Bridge 5.3
+            -AT&T Park 5.4
+            -North beach 5.5
+            -Pier 39 5.9
+
+            License number
+            1095258
+          </span>
+        </div>
+
+        <div className={s.btn}>
+          <button>Read More</button>
+        </div>
+
+      </div>
+
+      <div className={s.col40}>
+
+        <div className={s.con}>
+          <div className={s.card}>
+            
+            <div className={s.txtprice}>
+              <span className={s.txtcur}>IDR. </span>
+              {data[0].price}
+            </div>                          
+            
+            <div className={s.txtinput}>
+              <input type="number" placeholder="Mau berapa?"/>
+            </div>
+            
+            <div className={s.btnAdd}>
+              <button>Add to Cart</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  )
+}
+
+const Nameprod = () => {
+  
+  let data = null;  
+
+  const router = useRouter();
+  const query = router.query;
+
+  let param = new String();
+
+  if(query.id != undefined){
+    param = query.id;                 
+  }
+
+  const tmp = useSWR(`http://103.27.206.22:3000/v1/api/barang/${param}`, getDetBarang);
+
+  data = tmp.data;
+
+  let com  
+
+  if(data == null || data == undefined){
+    com = <Loading></Loading>
+  }else{
+    com = <Bod></Bod>
   }
 
   return(
-    <div>
-      <Head>
-        <title>{'name product'}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
 
-      <div className={Styles.FuContainer}>
-        {/* full container */}
-        <div className={Styles.Header}>
-          <div className={Styles.HeaderCon}>
-            <h1>Tittle Product</h1>
-            <div className={Styles.SubDetail}>
-              <span>(3)
-                <div className={Styles.ReviewStar}>
-                  <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
-                </div>
-              </span>|
-              <span>Nama Toko</span>|
-              <span>Lokasi Toko</span>
+  <Menu>
+
+    <Head>
+      <title>Kotakjualan - Product</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />       
+    </Head>
+
+    <div className={s.container}>      
+
+      <div className={s.Gallery}>
+        <div className={s.GalleryCon}>
+          <div className={s.GalleryGrid}>
+
+            <div className={s.Grid}>
+              <img src="/image/dash1.webp"></img>
             </div>
-          </div>
-        </div>
-        
-        <div className={Styles.Gallery}>
-          <div className={Styles.GalleryCon}>
-            <div className={Styles.GalleryGrid}>
-
-              <div className={Styles.Grid}>
-                <img src="/image/dash1.webp"></img>
-              </div>
-              <div className={Styles.Grid}>
-                <img src="/image/dash2.webp"></img>
-              </div>
-              <div className={Styles.Grid}>
-                <img src="/image/dash3.webp"></img>
-              </div>
-              <div className={Styles.Grid}>
-                <img src="/image/dash4.webp"></img>
-              </div>
-              <div className={Styles.Grid}>
-                <img src="/image/dash5.webp"></img>
-              </div>
-
+            <div className={s.Grid}>
+              <img src="/image/dash2.webp"></img>
             </div>
-          </div>
-        </div>
-        
-        <div className={Styles.Main}>
-          {/* 60% & 40% */}
-          <div className={Styles.MainCon}>
-            <div className={Styles.row}>
-
-              {/* Content */}
-              <div className={Styles.Content}>
-
-                <div className={Styles.ConHeader}>
-                  <div className={Styles.row}>
-                    <div className={Styles.ConTittle}>
-                      <h1>Tittle Product</h1>
-                      <div className={Styles.ConSubTittle}>
-                        <span>Name shop</span>
-                        <span>| Location shop</span>
-                        <span> Location shop</span>
-                      </div>
-                    </div>
-                    <div className={Styles.ConProfile}>
-                      <img src="/image/dash3.webp" alt="Profile Toko"/>
-                    </div>
-                  </div>
-                </div>
-                <div className={Styles.LineHr}></div>
-                
-                <div className={Styles.ConDesc}>
-                  <h1>Product Description</h1>
-
-                  {/* Filled Description Product */}
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                </div>
-                <div className={Styles.LineHr}></div>
-
-                <div className={Styles.ConReview}>
-
-                  <div className={Styles.ReviewHead}>
-                    <h1>Product Review</h1>
-                  </div>
-
-                  {/* Filled Review */}
-                  <div className={Styles.ColReview}>
-                    <div className={Styles.TittleReview}>
-                      <div className={Styles.ReviewProfile}>
-                        <img src="/image/dash3.webp" alt="Profile Toko"/>
-                      </div>
-                      <div className={Styles.SubTittleReview}>
-                        <p>Amar
-                          <div className={Styles.ReviewStar}>
-                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStar/>
-                          </div>
-                        </p>
-                        <span>11 Agustus 2020</span>
-                      </div>
-                    </div>
-                    <div className={Styles.Review}>
-                      <span>Ini hanya komentar pertama</span>
-                    </div>
-                  </div>
-
-                  <div className={Styles.ColReview}>
-                    <div className={Styles.TittleReview}>
-                      <div className={Styles.ReviewProfile}>
-                        <img src="/image/dash3.webp" alt="Profile Toko"/>
-                      </div>
-                      <div className={Styles.SubTittleReview}>
-                        <p>Amar
-                          <div className={Styles.ReviewStar}>
-                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/>
-                          </div>
-                        </p>
-                        <span>11 Agustus 2020</span>
-                      </div>
-                    </div>
-                    <div className={Styles.Review}>
-                      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span>
-                    </div>
-                  </div>
-                  
-                  <div className={Styles.ColReview}>
-                    <div className={Styles.TittleReview}>
-                      <div className={Styles.ReviewProfile}>
-                        <img src="/image/dash3.webp" alt="Profile Toko"/>
-                      </div>
-                      <div className={Styles.SubTittleReview}>
-                        <p>Amar
-                          <div className={Styles.ReviewStar}>
-                            <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/>
-                          </div>
-                        </p>
-                        <span>11 Agustus 2020</span>
-                      </div>
-                    </div>
-                    <div className={Styles.Review}>
-                      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span>
-                    </div>
-                  </div>
-                
-                </div>
-                <div className={Styles.LineHr}></div>
-
-              </div>
-              
-              <div className={Styles.Side}>
-                <div className={Styles.BoxCard}>
-                  <div className={Styles.Card}>
-
-                    <div className={Styles.Product}>
-                      <p>Review</p>
-                      <div className={Styles.ProductReview}>
-                        <span>(3)</span>
-                        <div className={Styles.ReviewStar}>
-                          <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Price}>
-                      <p>Price</p>
-                      <div className={Styles.ProductPrice}>
-                        <span>IDR 50.000</span>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Qty}>
-                      <p>Qty</p>
-                      <div className={Styles.ProductQty}>
-                        <button><BsFillPlusSquareFill/></button>
-                        <input type="number"></input>
-                        <button><BsDashSquareFill/></button>
-                      </div>
-                    </div>
-
-                    <div className={Styles.Submit}>
-                      <button>
-                        <span>Add to Cart</span>
-                        <TiShoppingCart/>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div className={s.Grid}>
+              <img src="/image/dash3.webp"></img>
             </div>
-          </div>
-
-        </div>
-        
-        <div className={Styles.FootBar}>
-          <div className={Styles.FootBarCon}>
-
-            <div className={Styles.row}>
-
-              <div className={Styles.FootTittle}>
-                <h1>Tittle Product</h1>
-                <div className={Styles.FootSubTittle}>
-                  <span>(3)
-                    <div className={Styles.ReviewStar}>
-                      <BsStarFill/><BsStarFill/><BsStarFill/><BsStarFill/><BsStarHalf/>
-                    </div>
-                  </span>|
-                  <span>IDR 50.000</span>
-                </div>
-              </div>
-              <div className={Styles.FootAct}>
-                <button>
-                  <span>Add to Cart</span>
-                  <TiShoppingCart/>
-                </button>
-              </div>
+            <div className={s.Grid}>
+              <img src="/image/dash4.webp"></img>
+            </div>
+            <div className={s.Grid}>
+              <img src="/image/dash5.webp"></img>
             </div>
 
           </div>
         </div>
-      
       </div>
-    </div>
-  )
 
+      {com}
+
+    </div>
+    </Menu>    
+  )
 }
 
-export default Product;
+export default Nameprod;
